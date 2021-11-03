@@ -1,0 +1,85 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace SecureCode
+{
+    public partial class FormLogin : Form
+    {
+        public static String Username;
+
+        public FormLogin()
+        {
+            InitializeComponent();
+            Username = "";
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void ButtonCloseApp_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void TextBoxName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonLogIn_Click(object sender, EventArgs e)
+        {
+
+            if (TextBoxName.Text.Equals("1") && TextBoxPassword.Text.Equals("2"))
+            {
+                LabelWelcomeText.Visible = true;
+                LabelWelcomeText.Text = "Benvingut " + TextBoxName.Text + " !";
+
+                PanelGeneralInformation.Hide();
+                PanelLoginTop.Hide();
+                LabelIncorrectLogin.Hide();
+
+                Username = TextBoxName.Text;
+
+                TimerLogin.Enabled = true;
+            } else
+            {
+                LabelIncorrectLogin.Text = "Usuari i/o contrasenya incorrectes";
+            }
+        }
+
+        private void TextBoxPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonCheckPassword_Click(object sender, EventArgs e)
+        {
+            if (TextBoxPassword.UseSystemPasswordChar == true)
+            {
+                TextBoxPassword.UseSystemPasswordChar = false;
+            } else if (TextBoxPassword.UseSystemPasswordChar == false)
+            {
+                TextBoxPassword.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void TimerLogin_Tick(object sender, EventArgs e)
+        {
+            TimerLogin.Stop();
+
+            this.Hide();
+            MainForm frmmain = new MainForm();
+            frmmain.ShowDialog();
+        }
+    }
+}
