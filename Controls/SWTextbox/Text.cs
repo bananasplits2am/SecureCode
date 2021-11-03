@@ -21,8 +21,8 @@ namespace SWTextbox
 
         public enum TipusDada
         {
-            Numero,
             Text,
+            Numero,
             Codi,
             Data
         }
@@ -46,6 +46,7 @@ namespace SWTextbox
             // 
             // SWTextBox
             // 
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Enter += new System.EventHandler(this.SWTextBox_Enter);
             this.Leave += new System.EventHandler(this.SWTextBox_Leave);
             this.Validating += new System.ComponentModel.CancelEventHandler(this.SWTextBox_Validating);
@@ -60,7 +61,7 @@ namespace SWTextbox
 
         private void SWTextBox_Enter(object sender, EventArgs e)
         {
-            this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(255, 192, 1);
         }
 
         //si podem abandonar o no segons si el camp està ple o buit
@@ -101,17 +102,22 @@ namespace SWTextbox
 
             Regex rgx = new Regex(patro);
 
-            if (!String.IsNullOrEmpty(this.Text) && rgx.IsMatch(this.Text))
+            if (EmptyField == false && !String.IsNullOrEmpty(this.Text) && rgx.IsMatch(this.Text))
             {
                 comprobant = true;
-
-                foreach (TextBox item in this.Parent.Controls)
+                if (ForeignKey == true)
                 {
-                    if(this.ControlName == item.Name)
+                    foreach (TextBox item in this.Parent.Controls)
                     {
-                        item.Text = this.Text;
+                        if(this.ControlName == item.Name)
+                        {
+                            item.Text = this.Text;
+                        }
                     }
                 }
+            } else if (EmptyField == true)
+            {
+                comprobant = true;
             } else
             {
                 comprobant = false;
@@ -135,6 +141,17 @@ namespace SWTextbox
                 _ForeignKey = value;
             }
         }
+
+        private bool _EmptyField;
+        public bool EmptyField
+        {
+            get { return _EmptyField; }
+            set
+            {
+                _EmptyField = value;
+            }
+        }
+
 
         //string nom del control
         //-----------------------------------------------------
