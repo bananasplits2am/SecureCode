@@ -1,0 +1,17 @@
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\Controls\ProvaControls\bin\Debug\ProvaControls.exe.config
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\Controls\ProvaControls\bin\Debug\ProvaControls.exe
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\Controls\ProvaControls\bin\Debug\ProvaControls.pdb
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\Controls\ProvaControls\bin\Debug\LlencaAplicacions.dll
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\Controls\ProvaControls\bin\Debug\SWCodi.dll
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\Controls\ProvaControls\bin\Debug\SWTextbox.dll
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\Controls\ProvaControls\bin\Debug\LlencaAplicacions.pdb
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\Controls\ProvaControls\bin\Debug\SWCodi.pdb
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\Controls\ProvaControls\bin\Debug\SWTextbox.pdb
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\Controls\ProvaControls\obj\Debug\ProvaControls.csprojAssemblyReference.cache
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\Controls\ProvaControls\obj\Debug\ProvaControls.FormulariTest.resources
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\Controls\ProvaControls\obj\Debug\ProvaControls.Properties.Resources.resources
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\Controls\ProvaControls\obj\Debug\ProvaControls.csproj.GenerateResource.cache
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\Controls\ProvaControls\obj\Debug\ProvaControls.csproj.CoreCompileInputs.cache
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\Controls\ProvaControls\obj\Debug\ProvaControls.csproj.CopyComplete
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\Controls\ProvaControls\obj\Debug\ProvaControls.exe
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\Controls\ProvaControls\obj\Debug\ProvaControls.pdb
