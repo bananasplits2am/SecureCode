@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace AccesDades
 {
-
+    //start
     public partial class Formulari : Form
     {
         private SqlConnection connexio;
