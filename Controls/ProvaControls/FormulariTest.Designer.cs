@@ -49,7 +49,9 @@ namespace ProvaControls
             // swTextBox1
             // 
             this.swTextBox1.AllowedData = SWTextbox.SWTextBox.TipusDada.Text;
+            this.swTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.swTextBox1.ControlName = "NameHere";
+            this.swTextBox1.EmptyField = false;
             this.swTextBox1.ForeignKey = false;
             this.swTextBox1.Location = new System.Drawing.Point(15, 13);
             this.swTextBox1.Name = "swTextBox1";
@@ -59,7 +61,9 @@ namespace ProvaControls
             // NameHere
             // 
             this.NameHere.AllowedData = SWTextbox.SWTextBox.TipusDada.Text;
+            this.NameHere.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.NameHere.ControlName = "";
+            this.NameHere.EmptyField = false;
             this.NameHere.ForeignKey = false;
             this.NameHere.Location = new System.Drawing.Point(15, 39);
             this.NameHere.Name = "NameHere";

@@ -18,6 +18,38 @@ namespace LlencaAplicacions
             InitializeComponent();
         }
 
+        private String _Titol;
+        public String Titol
+        {
+            get { return _Titol; }
+            set
+            {
+                _Titol = value;
+            }
+        }
+
+        private String _Classe;
+        public String Classe
+        {
+            get { return _Classe; }
+            set
+            {
+                _Classe = value;
+            }
+        }
+
+        private String _Form;
+        public String Form
+        {
+            get { return _Form; }
+            set
+            {
+                _Form = value;
+            }
+        }
+
+        //--------------------------------------------------------------
+
         private String _Finestra_ensenyar;
         public String Finestra_ensenyar
         {
@@ -31,16 +63,6 @@ namespace LlencaAplicacions
         private void SWLlenca_Load(object sender, EventArgs e)
         {
             Label.Text = Titol;
-        }
-
-        private String _Titol;
-        public String Titol
-        {
-            get { return _Titol; }
-            set
-            {
-                _Titol = value;
-            }
         }
 
         private void SWLlenca_Click(object sender, EventArgs e)
