@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
+
 
 namespace SecureCode
 {
     public partial class FormLogin : Form
     {
         public static String Username;
+        bool comprobant = false;
 
         public FormLogin()
         {
@@ -20,46 +23,23 @@ namespace SecureCode
             Username = "";
         }
 
-        private void FormLogin_Load(object sender, EventArgs e)
-        {
-
-
-        }
-
         private void ButtonCloseApp_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void TextBoxName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void ButtonLogIn_Click(object sender, EventArgs e)
         {
-
+            pictureBoxGIf.Visible = true;
+            TimerLogin.Enabled = true;
             if (TextBoxName.Text.Equals("1") && TextBoxPassword.Text.Equals("2"))
             {
-                LabelWelcomeText.Visible = true;
-                LabelWelcomeText.Text = "Benvingut " + TextBoxName.Text + " !";
-
-                PanelGeneralInformation.Hide();
-                PanelLoginTop.Hide();
-                LabelIncorrectLogin.Hide();
-
-                Username = TextBoxName.Text;
-
-                TimerLogin.Enabled = true;
-            } else
-            {
-                LabelIncorrectLogin.Text = "Usuari i/o contrasenya incorrectes";
+                comprobant = true;
             }
-        }
-
-        private void TextBoxPassword_TextChanged(object sender, EventArgs e)
-        {
-
+            else
+            {
+                comprobant = false;
+            }
         }
 
         private void ButtonCheckPassword_Click(object sender, EventArgs e)
@@ -76,10 +56,34 @@ namespace SecureCode
         private void TimerLogin_Tick(object sender, EventArgs e)
         {
             TimerLogin.Stop();
+            pictureBoxGIf.Visible = false;
 
-            this.Hide();
-            MainForm frmmain = new MainForm();
-            frmmain.ShowDialog();
+            if (comprobant == true)
+            {
+                Username = TextBoxName.Text;
+                this.Hide();
+                MainForm frmmain = new MainForm();
+                frmmain.ShowDialog();
+
+            }
+            else
+            {
+                LabelIncorrectLogin.Text = "Usuari i/o contrasenya incorrectes";
+            }
+            
+        }
+
+        private void TextBoxPassword_TextChanged(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(TextBoxPassword.Text))
+            {
+                ButtonCheckPassword.Visible = true;
+            }
+            else
+            {
+                ButtonCheckPassword.Visible = false;
+                TextBoxPassword.UseSystemPasswordChar = true;
+            }
         }
     }
 }
