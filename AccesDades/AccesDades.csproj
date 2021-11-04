@@ -102,5 +102,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="ConnexioBD\ConnexioBD.csproj">
+      <Project>{8077036b-b090-464f-bda5-82c43cd4ca3d}</Project>
+      <Name>ConnexioBD</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

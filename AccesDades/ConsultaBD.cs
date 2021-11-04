@@ -12,39 +12,45 @@ using System.Data.SqlClient;
 namespace AccesDades
 {
     //start
+
     public partial class Formulari : Form
     {
-        private SqlConnection connexio;
-        private String consulta;
+        ConnexioBD.Class1 cls = new ConnexioBD.Class1();
+        //private SqlConnection connexio;
+        //private String consulta;
         private bool check_nou;
-        DataSet dts;
+        String codiBD = "Data Source=DESKTOP-1NA7VLL\\SQLEXPRESS;Initial Catalog=bdBannanaSplit;Integrated Security=True";
+        //DataSet dts;
 
         public Formulari()
         {
             InitializeComponent();
+            cls.Connectar(codiBD);
         }
 
-        private void Connectar()
-        {
-            String codi;
-            codi = "Data Source=DESKTOP-1NA7VLL\\SQLEXPRESS;Initial Catalog=bdBannanaSplit;Integrated Security=True";
-            connexio = new SqlConnection(codi);
-        }
+        //private void Connectar()
+        //{
+        //    String codi;
+        //    codi = "Data Source=DESKTOP-1NA7VLL\\SQLEXPRESS;Initial Catalog=bdBannanaSplit;Integrated Security=True";
+        //    connexio = new SqlConnection(codi);
+        //}
 
+
+        //-------------------portartaula
         private void Portardades()
         {
-            Connectar();
+        //    cls.Connectar();
 
-            SqlDataAdapter adaptador;
-            consulta = "Select * From Agencies";
-            adaptador = new SqlDataAdapter(consulta, connexio);
+        //    SqlDataAdapter adaptador;
+        //    consulta = "Select * From Agencies";
+        //    adaptador = new SqlDataAdapter(consulta, cls.connexio);
 
-            connexio.Open();
-            dts = new DataSet();
-            adaptador.Fill(dts, "Chamo"); //el nom que volguem
-            connexio.Close();
+        //    cls.connexio.Open();
+        //    dts = new DataSet();
+        //    adaptador.Fill(dts, "Chamo"); //el nom que volguem
+        //    cls.connexio.Close();
 
-            DataGridView.DataSource = dts.Tables[0];
+            DataGridView.DataSource = cls.dts.Tables[0];
             DataGridView.Columns[0].Visible = false;
         }
 
@@ -60,12 +66,13 @@ namespace AccesDades
             RichTextBoxXML.Text = XMLbd;
         }
 
+        //-------------actualitzar
         private void Actualitza()
         {
-            connexio.Open();
+            cls.connexio.Open();
 
             SqlDataAdapter adaptador;
-            adaptador = new SqlDataAdapter(consulta, connexio);
+            adaptador = new SqlDataAdapter(consulta, cls.connexio);
 
             //SqlDataAdapter cmdBuilder;
             //cmdBuilder = new SqlDataAdapter(adaptador);
@@ -79,7 +86,7 @@ namespace AccesDades
                 MessageBox.Show("Canvis totals: " + resultat.ToString());
             }
 
-            connexio.Close();
+            cls.connexio.Close();
         }
 
         private void Binding()
