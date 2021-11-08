@@ -42,9 +42,5 @@ namespace SecureCode
             }
         }
 
-        private void ProgressBarSplashScreen_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
