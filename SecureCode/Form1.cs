@@ -59,17 +59,42 @@ namespace SecureCode
 
         private void MainForm_MouseDown(object sender, MouseEventArgs e)
         {
-            arrastrar = true;
-            posicionInicio = new Point(e.X,e.Y);
+
         }
 
         private void MainForm_MouseUp(object sender, MouseEventArgs e)
         {
-            arrastrar = false;
+
         }
 
         private void MainForm_MouseMove(object sender, MouseEventArgs e)
         {
+
+        }
+
+        private void buttonTencarSessio_Click(object sender, EventArgs e)
+        {
+            FormLogin Login = new FormLogin();
+            this.Close();
+            this.Hide(); //mirar como solo usar el hide
+            Login.ShowDialog();
+
+        }
+
+        private void LabelUserName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            arrastrar = true;
+            posicionInicio = new Point(e.X, e.Y);
+        }
+
+        private void panel2_MouseMove(object sender, MouseEventArgs e)
+        {
+            
             if (arrastrar)
             {
                 Point p = PointToScreen(e.Location);
@@ -77,12 +102,9 @@ namespace SecureCode
             }
         }
 
-        private void buttonTencarSessio_Click(object sender, EventArgs e)
+        private void panel2_MouseUp(object sender, MouseEventArgs e)
         {
-            FormLogin Login = new FormLogin();
-            this.Close();
-            Login.ShowDialog();
-
+            arrastrar = false;
         }
     }
 }

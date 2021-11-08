@@ -33,6 +33,7 @@ namespace SecureCode
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.LabelUser = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonTencarSessio = new System.Windows.Forms.Button();
             this.LabelUserName = new System.Windows.Forms.Label();
             this.pictureUser = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -48,7 +49,6 @@ namespace SecureCode
             this.labelEmpresa = new System.Windows.Forms.Label();
             this.labelAny = new System.Windows.Forms.Label();
             this.labelVersio = new System.Windows.Forms.Label();
-            this.buttonTencarSessio = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).BeginInit();
             this.panel2.SuspendLayout();
@@ -87,6 +87,20 @@ namespace SecureCode
             this.panel1.Size = new System.Drawing.Size(182, 740);
             this.panel1.TabIndex = 1;
             // 
+            // buttonTencarSessio
+            // 
+            this.buttonTencarSessio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonTencarSessio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonTencarSessio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTencarSessio.ForeColor = System.Drawing.Color.Gray;
+            this.buttonTencarSessio.Location = new System.Drawing.Point(15, 689);
+            this.buttonTencarSessio.Name = "buttonTencarSessio";
+            this.buttonTencarSessio.Size = new System.Drawing.Size(150, 40);
+            this.buttonTencarSessio.TabIndex = 3;
+            this.buttonTencarSessio.Text = "Tencar sessió";
+            this.buttonTencarSessio.UseVisualStyleBackColor = false;
+            this.buttonTencarSessio.Click += new System.EventHandler(this.buttonTencarSessio_Click);
+            // 
             // LabelUserName
             // 
             this.LabelUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -96,6 +110,7 @@ namespace SecureCode
             this.LabelUserName.Size = new System.Drawing.Size(52, 20);
             this.LabelUserName.TabIndex = 2;
             this.LabelUserName.Text = "*user*";
+            this.LabelUserName.Click += new System.EventHandler(this.LabelUserName_Click);
             // 
             // pictureUser
             // 
@@ -192,6 +207,9 @@ namespace SecureCode
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1320, 46);
             this.panel2.TabIndex = 2;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel2_MouseDown);
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
+            this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
             // 
             // buttonClose
             // 
@@ -290,20 +308,6 @@ namespace SecureCode
             this.labelVersio.Size = new System.Drawing.Size(106, 22);
             this.labelVersio.TabIndex = 0;
             this.labelVersio.Text = "Versió 1.0.1";
-            // 
-            // buttonTencarSessio
-            // 
-            this.buttonTencarSessio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonTencarSessio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.buttonTencarSessio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTencarSessio.ForeColor = System.Drawing.Color.Gray;
-            this.buttonTencarSessio.Location = new System.Drawing.Point(15, 689);
-            this.buttonTencarSessio.Name = "buttonTencarSessio";
-            this.buttonTencarSessio.Size = new System.Drawing.Size(150, 40);
-            this.buttonTencarSessio.TabIndex = 3;
-            this.buttonTencarSessio.Text = "Tencar sessió";
-            this.buttonTencarSessio.UseVisualStyleBackColor = false;
-            this.buttonTencarSessio.Click += new System.EventHandler(this.buttonTencarSessio_Click);
             // 
             // MainForm
             // 
