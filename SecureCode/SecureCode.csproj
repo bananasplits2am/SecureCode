@@ -119,5 +119,10 @@
   <ItemGroup>
     <None Include="Resources\Banana no background - còpia.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8macosminimizar60.png" />
+    <None Include="Resources\icons8-macos-maximize-60.png" />
+    <None Include="Resources\iconoMax.bmp" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

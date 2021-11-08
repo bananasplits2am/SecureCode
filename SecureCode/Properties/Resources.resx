@@ -139,4 +139,10 @@
   <data name="Banana no background - còpia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Banana no background - còpia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8macosminimizar60" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8macosminimizar60.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_macos_maximize_60" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-macos-maximize-60.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
