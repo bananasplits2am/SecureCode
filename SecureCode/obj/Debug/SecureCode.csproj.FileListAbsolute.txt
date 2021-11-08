@@ -10,3 +10,15 @@ D:\Documents\2021-2022\Projectes\Secure Code\SecureCode\obj\Debug\SecureCode.pdb
 D:\Documents\2021-2022\Projectes\Secure Code\SecureCode\obj\Debug\SecureCode.MainForm.resources
 D:\Documents\2021-2022\Projectes\Secure Code\SecureCode\obj\Debug\SecureCode.FormLoadingScreen.resources
 D:\Documents\2021-2022\Projectes\Secure Code\SecureCode\obj\Debug\SecureCode.FormLogin.resources
+C:\Users\Sales\Desktop\DAM\PR\MisActividades\GrupoSprint1\SecureCodeGitHub\SecureCode\SecureCode\bin\Debug\SecureCode.exe.config
+C:\Users\Sales\Desktop\DAM\PR\MisActividades\GrupoSprint1\SecureCodeGitHub\SecureCode\SecureCode\bin\Debug\SecureCode.exe
+C:\Users\Sales\Desktop\DAM\PR\MisActividades\GrupoSprint1\SecureCodeGitHub\SecureCode\SecureCode\bin\Debug\SecureCode.pdb
+C:\Users\Sales\Desktop\DAM\PR\MisActividades\GrupoSprint1\SecureCodeGitHub\SecureCode\SecureCode\obj\Debug\SecureCode.csproj.AssemblyReference.cache
+C:\Users\Sales\Desktop\DAM\PR\MisActividades\GrupoSprint1\SecureCodeGitHub\SecureCode\SecureCode\obj\Debug\SecureCode.MainForm.resources
+C:\Users\Sales\Desktop\DAM\PR\MisActividades\GrupoSprint1\SecureCodeGitHub\SecureCode\SecureCode\obj\Debug\SecureCode.FormLoadingScreen.resources
+C:\Users\Sales\Desktop\DAM\PR\MisActividades\GrupoSprint1\SecureCodeGitHub\SecureCode\SecureCode\obj\Debug\SecureCode.FormLogin.resources
+C:\Users\Sales\Desktop\DAM\PR\MisActividades\GrupoSprint1\SecureCodeGitHub\SecureCode\SecureCode\obj\Debug\SecureCode.Properties.Resources.resources
+C:\Users\Sales\Desktop\DAM\PR\MisActividades\GrupoSprint1\SecureCodeGitHub\SecureCode\SecureCode\obj\Debug\SecureCode.csproj.GenerateResource.cache
+C:\Users\Sales\Desktop\DAM\PR\MisActividades\GrupoSprint1\SecureCodeGitHub\SecureCode\SecureCode\obj\Debug\SecureCode.csproj.CoreCompileInputs.cache
+C:\Users\Sales\Desktop\DAM\PR\MisActividades\GrupoSprint1\SecureCodeGitHub\SecureCode\SecureCode\obj\Debug\SecureCode.exe
+C:\Users\Sales\Desktop\DAM\PR\MisActividades\GrupoSprint1\SecureCodeGitHub\SecureCode\SecureCode\obj\Debug\SecureCode.pdb

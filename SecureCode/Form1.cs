@@ -12,64 +12,77 @@ namespace SecureCode
 {
     public partial class MainForm : Form
     {
+        private bool arrastrar = false;
+        private Point posicionInicio = new Point(0, 0);
         public MainForm()
         {
             InitializeComponent();
-            LabelUserName.Text = "Sessió iniciada com a: " + FormLogin.Username;
+            LabelUser.Text = "Sessió iniciada com a";
+            LabelUserName.Text = FormLogin.Username;
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ButtonCloseApp_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void ButtonMaximizeWindow_Click(object sender, EventArgs e)
+        private void buttonMin_Click(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Maximized)
             {
+                buttonMin.BackgroundImage = Properties.Resources.icons8_macos_maximize_60;
                 this.WindowState = FormWindowState.Normal;
                 this.BackgroundImage = Properties.Resources.Fons_complet_reduit;
-            }
-            else if (this.WindowState == FormWindowState.Normal)
+                this.CenterToScreen();
+            } else if (this.WindowState == FormWindowState.Normal)
             {
+                buttonMin.BackgroundImage = Properties.Resources.icons8macosminimizar60;
                 this.WindowState = FormWindowState.Maximized;
                 this.BackgroundImage = Properties.Resources.Fons;
             }
         }
-
-        private void LabelProgramTitle_Click(object sender, EventArgs e)
+        private void buttonInfo_Click(object sender, EventArgs e)
         {
-
-        }
-
-        //private void TopPanel_Paint(object sender, PaintEventArgs e)
-        //{
-
-        //}
-
-        private void ButtonFullScreen_Click(object sender, EventArgs e)
-        {
-            if (this.Size == Screen.PrimaryScreen.WorkingArea.Size && this.Location == Screen.PrimaryScreen.WorkingArea.Location)
+            if (panelInfo.Visible == false)
             {
-                this.Size = new Size(1200, 561);
-                this.CenterToScreen();
-                this.BackgroundImage = Properties.Resources.Fons_complet_reduit;
+                panelInfo.Visible = true;
             } else
             {
-                this.Location = Screen.PrimaryScreen.WorkingArea.Location;
-                this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-                this.BackgroundImage = Properties.Resources.Fons;
+                panelInfo.Visible = false;
             }
         }
 
-        private void ButtonMinimizeScreen_Click(object sender, EventArgs e)
+        private void buttonClose_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            Application.Exit();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+           //pictureUser.
+        }
+
+        private void MainForm_MouseDown(object sender, MouseEventArgs e)
+        {
+            arrastrar = true;
+            posicionInicio = new Point(e.X,e.Y);
+        }
+
+        private void MainForm_MouseUp(object sender, MouseEventArgs e)
+        {
+            arrastrar = false;
+        }
+
+        private void MainForm_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (arrastrar)
+            {
+                Point p = PointToScreen(e.Location);
+                Location = new Point(p.X - this.posicionInicio.X, p.Y - this.posicionInicio.Y);
+            }
+        }
+
+        private void buttonTencarSessio_Click(object sender, EventArgs e)
+        {
+            FormLogin Login = new FormLogin();
+            this.Close();
+            Login.ShowDialog();
+
         }
     }
 }
