@@ -4,3 +4,9 @@ D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\AccesDa
 D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\AccesDades\ConnexioBD\obj\Debug\ConnexioBD.csproj.CoreCompileInputs.cache
 D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\AccesDades\ConnexioBD\obj\Debug\ConnexioBD.dll
 D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\AccesDades\ConnexioBD\obj\Debug\ConnexioBD.pdb
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\ConnexioBD\bin\Debug\ConnexioBD.dll
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\ConnexioBD\bin\Debug\ConnexioBD.pdb
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\ConnexioBD\obj\Debug\ConnexioBD.csprojAssemblyReference.cache
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\ConnexioBD\obj\Debug\ConnexioBD.csproj.CoreCompileInputs.cache
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\ConnexioBD\obj\Debug\ConnexioBD.dll
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\ConnexioBD\obj\Debug\ConnexioBD.pdb

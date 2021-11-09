@@ -16,6 +16,8 @@ namespace SecureCode
     {
         public static String Username;
         bool comprobant = false;
+        public String CodiBD = "Data Source=DESKTOP-1NA7VLL\\SQLEXPRESS;Initial Catalog = SecureCore; Integrated Security = True";
+        ConnexioBD.ClassHederat cls = new ConnexioBD.ClassHederat();
 
         public FormLogin()
         {
@@ -32,14 +34,22 @@ namespace SecureCode
         {
             pictureBoxGIf.Visible = true;
             TimerLogin.Enabled = true;
-            if (TextBoxName.Text.Equals("1") && TextBoxPassword.Text.Equals("2"))
-            {
-                comprobant = true;
-            }
-            else
-            {
-                comprobant = false;
-            }
+
+            cls.Connectar(CodiBD);
+            comprobant = ComprbarUsuari();
+            //AQUI LES FUNCIONS DE CLASS1
+            //TextBoxName.Text.Equals("1") && TextBoxPassword.Text.Equals("2")
+
+        }
+
+        private bool ComprbarUsuari()
+        {
+            //TextBoxName.Text.Equals("1") && TextBoxPassword.Text.Equals("2")
+            String consulta = "Select Login, Password From users Where Login like ('" + TextBoxName.Text + "') and Password like ('" + TextBoxPassword.Text + "')";
+
+            cls.PortarperConsulta(consulta);
+
+            return cls.comprobar_psswd(TextBoxName.Text, TextBoxPassword.Text);
         }
 
         private void ButtonCheckPassword_Click(object sender, EventArgs e)

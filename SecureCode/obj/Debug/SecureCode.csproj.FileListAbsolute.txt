@@ -22,3 +22,18 @@ C:\Users\sforc\OneDrive\Documentos\GitHub\SecureCode\SecureCode\obj\Debug\Secure
 C:\Users\sforc\OneDrive\Documentos\GitHub\SecureCode\SecureCode\obj\Debug\SecureCode.csproj.CoreCompileInputs.cache
 C:\Users\sforc\OneDrive\Documentos\GitHub\SecureCode\SecureCode\obj\Debug\SecureCode.exe
 C:\Users\sforc\OneDrive\Documentos\GitHub\SecureCode\SecureCode\obj\Debug\SecureCode.pdb
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\SecureCode\bin\Debug\SecureCode.exe.config
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\SecureCode\bin\Debug\SecureCode.exe
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\SecureCode\bin\Debug\SecureCode.pdb
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\SecureCode\bin\Debug\ConnexioBD.dll
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\SecureCode\bin\Debug\ConnexioBD.pdb
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\SecureCode\obj\Debug\SecureCode.csprojAssemblyReference.cache
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\SecureCode\obj\Debug\SecureCode.MainForm.resources
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\SecureCode\obj\Debug\SecureCode.FormLoadingScreen.resources
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\SecureCode\obj\Debug\SecureCode.FormLogin.resources
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\SecureCode\obj\Debug\SecureCode.Properties.Resources.resources
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\SecureCode\obj\Debug\SecureCode.csproj.GenerateResource.cache
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\SecureCode\obj\Debug\SecureCode.csproj.CoreCompileInputs.cache
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\SecureCode\obj\Debug\SecureCode.csproj.CopyComplete
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\SecureCode\obj\Debug\SecureCode.exe
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\SecureCode\obj\Debug\SecureCode.pdb
