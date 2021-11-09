@@ -68,7 +68,7 @@ namespace ConnexioBD
             connexio.Close();
         }
 
-        public void Executar(SqlDataAdapter adaptador)
+        private void Executar(SqlDataAdapter adaptador)
         {
             adaptador.Update(dts.Tables["BD"]);
         }
