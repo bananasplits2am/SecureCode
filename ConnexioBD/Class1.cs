@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace ConnexioBD
 {
@@ -15,7 +16,9 @@ namespace ConnexioBD
         public DataSet dts;
         private SqlDataAdapter adaptador;
 
-        private String _ConnectionString;
+        private ConnectionStringSettings conf = ConfigurationManager.ConnectionStrings["BananaSplit"];
+
+        /*private String _ConnectionString;
         public String ConnectionString
         {
             get { return _ConnectionString; }
@@ -23,15 +26,21 @@ namespace ConnexioBD
             {
                 _ConnectionString = value;
             }
-        }
+        }*/
 
-        public void Connectar(String codiBD)
+        public void Connectar()   //es deixa en public ja que sino la funcio que es troba en public class ClassHederat : ClasseMain no ens dona accés
         {
-            connexio = new SqlConnection(codiBD);
+            if (conf != null)
+            {
+                String cnx = conf.ConnectionString;
+                connexio = new SqlConnection(cnx);
+            }
         }
 
         public void PortarTaula(String choosen_table) //retorna un dataset amb els registres de la taula
         {
+            Connectar();
+
             SqlDataAdapter adaptador;
             consulta = "Select * From " + choosen_table; //comprobar que no sigui amb dbo.+nomtaula
             adaptador = new SqlDataAdapter(consulta, connexio);
@@ -44,6 +53,8 @@ namespace ConnexioBD
 
         public void PortarperConsulta(String consulta) //Rep Consulta i torna DataSet
         {
+            Connectar();
+
             SqlDataAdapter adaptador;
             adaptador = new SqlDataAdapter(consulta, connexio);
 
@@ -62,15 +73,23 @@ namespace ConnexioBD
 
             if (dts.HasChanges())
             {
-                Executar(adaptador);
+                adaptador.Update(dts.Tables["BD"]);
             }
 
             connexio.Close();
         }
 
-        private void Executar(SqlDataAdapter adaptador)
+        public void Executar(String consulta)      //insert into users values (1, 'Guti')
         {
-            adaptador.Update(dts.Tables["BD"]);
+            Connectar();
+
+            connexio.Open();
+
+            SqlCommand cmd = new SqlCommand(consulta, connexio);
+            int registresAfectats = cmd.ExecuteNonQuery();
+            cmd.Dispose();
+
+            connexio.Close();
         }
 
         public bool comprobar_psswd(String Nom, String Psswd)
@@ -90,8 +109,10 @@ namespace ConnexioBD
 
     public class ClassHederat : ClasseMain
     {
-        private void PortarperConsulta(String consulta, String nomDataTable) //Rep Consulta, nom a la DataTable i torna DataSet
+        public void PortarperConsulta(String consulta, String nomDataTable) //Rep Consulta, nom a la DataTable i torna DataSet
         {
+            Connectar();
+
             SqlDataAdapter adaptador;
             adaptador = new SqlDataAdapter(consulta, connexio);
 

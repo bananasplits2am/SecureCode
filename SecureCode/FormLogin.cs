@@ -16,7 +16,6 @@ namespace SecureCode
     {
         public static String Username;
         bool comprobant = false;
-        public String CodiBD = "Data Source=DESKTOP-1NA7VLL\\SQLEXPRESS;Initial Catalog = SecureCore; Integrated Security = True";
         ConnexioBD.ClassHederat cls = new ConnexioBD.ClassHederat();
 
         public FormLogin()
@@ -35,7 +34,6 @@ namespace SecureCode
             pictureBoxGIf.Visible = true;
             TimerLogin.Enabled = true;
 
-            cls.Connectar(CodiBD);
             comprobant = ComprbarUsuari();
             //AQUI LES FUNCIONS DE CLASS1
             //TextBoxName.Text.Equals("1") && TextBoxPassword.Text.Equals("2")
