@@ -120,9 +120,10 @@
     <None Include="Resources\Banana no background - còpia.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8macosminimizar60.png" />
-    <None Include="Resources\icons8-macos-maximize-60.png" />
-    <None Include="Resources\iconoMax.bmp" />
+    <ProjectReference Include="..\ConnexioBD\ConnexioBD.csproj">
+      <Project>{8077036b-b090-464f-bda5-82c43cd4ca3d}</Project>
+      <Name>ConnexioBD</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
