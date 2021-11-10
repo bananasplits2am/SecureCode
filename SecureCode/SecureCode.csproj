@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AccesDades">
+      <HintPath>..\AccesDades\bin\Debug\AccesDades.dll</HintPath>
+    </Reference>
     <Reference Include="LlencaAplicacions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Controls\LlencaAplicacions\bin\Debug\LlencaAplicacions.dll</HintPath>
