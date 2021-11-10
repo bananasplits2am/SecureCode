@@ -49,3 +49,7 @@ D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\SecureC
 D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\SecureCode\obj\Debug\SecureCode.csproj.CopyComplete
 D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\SecureCode\obj\Debug\SecureCode.exe
 D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\SecureCode\obj\Debug\SecureCode.pdb
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\SecureCode\bin\Debug\SWTextbox.dll
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\SecureCode\bin\Debug\SWTextbox.pdb
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\SecureCode\bin\Debug\LlencaAplicacions.dll
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\SecureCode\bin\Debug\LlencaAplicacions.pdb

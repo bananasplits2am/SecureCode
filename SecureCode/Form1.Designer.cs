@@ -110,7 +110,6 @@ namespace SecureCode
             this.LabelUserName.Size = new System.Drawing.Size(52, 20);
             this.LabelUserName.TabIndex = 2;
             this.LabelUserName.Text = "*user*";
-            this.LabelUserName.Click += new System.EventHandler(this.LabelUserName_Click);
             // 
             // pictureUser
             // 
@@ -328,9 +327,6 @@ namespace SecureCode
             this.Text = "Formulari";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainForm_Load);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseMove);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseUp);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).EndInit();

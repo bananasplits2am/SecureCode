@@ -14,6 +14,7 @@ namespace SecureCode
     {
         private bool arrastrar = false;
         private Point posicionInicio = new Point(0, 0);
+
         public MainForm()
         {
             InitializeComponent();
@@ -57,32 +58,12 @@ namespace SecureCode
            //pictureUser.
         }
 
-        private void MainForm_MouseDown(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void MainForm_MouseUp(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void MainForm_MouseMove(object sender, MouseEventArgs e)
-        {
-
-        }
-
         private void buttonTencarSessio_Click(object sender, EventArgs e)
         {
             FormLogin Login = new FormLogin();
             this.Close();
             this.Hide(); //mirar como solo usar el hide
             Login.ShowDialog();
-
-        }
-
-        private void LabelUserName_Click(object sender, EventArgs e)
-        {
 
         }
 
