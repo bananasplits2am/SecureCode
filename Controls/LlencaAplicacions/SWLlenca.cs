@@ -28,6 +28,16 @@ namespace LlencaAplicacions
             }
         }
 
+        private String _Rang;
+        public String Rang
+        {
+            get { return _Rang; }
+            set
+            {
+                _Rang = value;
+            }
+        }
+
         private String _Classe;
         public String Classe //namespace
         {
@@ -54,7 +64,13 @@ namespace LlencaAplicacions
 
         private void SWLlenca_Load(object sender, EventArgs e)
         {
+            //int user = 50;
+            //if (int.Parse(Rang) <= int.Parse(User)) {  //el 10 es el valor del usuari, es canviara per una variable
             Label.Text = Titol;
+            //} else
+            //{
+            //    this.Hide();
+            //}
         }
 
         private void SWLlenca_Click(object sender, EventArgs e)
@@ -65,7 +81,7 @@ namespace LlencaAplicacions
             Object dllBD;
             Type tipus;
 
-            Assembly ensamblat = Assembly.LoadFile(@"" + Classe + ".exe");
+            Assembly ensamblat = Assembly.LoadFile(@"" + Classe + ".dll");
 
             tipus = ensamblat.GetType(Classe + "." + Form);
 

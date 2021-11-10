@@ -41,9 +41,9 @@ namespace LlencaAplicacions
             // pictureBox1
             // 
             this.pictureBox1.Image = global::LlencaAplicacions.Properties.Resources.Banana_no_background___còpia;
-            this.pictureBox1.Location = new System.Drawing.Point(21, 11);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 13);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 34);
+            this.pictureBox1.Size = new System.Drawing.Size(30, 41);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -51,7 +51,7 @@ namespace LlencaAplicacions
             // 
             this.Label.AutoSize = true;
             this.Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label.Location = new System.Drawing.Point(57, 20);
+            this.Label.Location = new System.Drawing.Point(39, 23);
             this.Label.Name = "Label";
             this.Label.Size = new System.Drawing.Size(68, 16);
             this.Label.TabIndex = 1;
@@ -67,7 +67,7 @@ namespace LlencaAplicacions
             this.Controls.Add(this.Label);
             this.Controls.Add(this.pictureBox1);
             this.Name = "SWLlenca";
-            this.Size = new System.Drawing.Size(193, 61);
+            this.Size = new System.Drawing.Size(136, 57);
             this.Load += new System.EventHandler(this.SWLlenca_Load);
             this.Click += new System.EventHandler(this.SWLlenca_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
