@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecureCode", "SecureCode.cs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnexioBD", "..\ConnexioBD\ConnexioBD.csproj", "{8077036B-B090-464F-BDA5-82C43CD4CA3D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWTextbox", "..\Controls\SWTextbox\SWTextbox.csproj", "{AD4FB985-D4D4-4F09-851D-D5E59649F906}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LlencaAplicacions", "..\Controls\LlencaAplicacions\LlencaAplicacions.csproj", "{4C9E29F0-0D9F-4EB4-9F99-83BC8C863DAA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{8077036B-B090-464F-BDA5-82C43CD4CA3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8077036B-B090-464F-BDA5-82C43CD4CA3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8077036B-B090-464F-BDA5-82C43CD4CA3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD4FB985-D4D4-4F09-851D-D5E59649F906}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD4FB985-D4D4-4F09-851D-D5E59649F906}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD4FB985-D4D4-4F09-851D-D5E59649F906}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD4FB985-D4D4-4F09-851D-D5E59649F906}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C9E29F0-0D9F-4EB4-9F99-83BC8C863DAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C9E29F0-0D9F-4EB4-9F99-83BC8C863DAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C9E29F0-0D9F-4EB4-9F99-83BC8C863DAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C9E29F0-0D9F-4EB4-9F99-83BC8C863DAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

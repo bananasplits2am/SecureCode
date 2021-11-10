@@ -14,7 +14,7 @@ namespace ConnexioBD
         public SqlConnection connexio;
         private String consulta;
         public DataSet dts;
-        private SqlDataAdapter adaptador;
+        public SqlDataAdapter adaptador;
 
         private ConnectionStringSettings conf = ConfigurationManager.ConnectionStrings["BananaSplit"];
 
@@ -41,7 +41,7 @@ namespace ConnexioBD
         {
             Connectar();
 
-            SqlDataAdapter adaptador;
+            //SqlDataAdapter adaptador;
             consulta = "Select * From " + choosen_table; //comprobar que no sigui amb dbo.+nomtaula
             adaptador = new SqlDataAdapter(consulta, connexio);
 
@@ -57,7 +57,7 @@ namespace ConnexioBD
         {
             Connectar();
 
-            SqlDataAdapter adaptador;
+            //SqlDataAdapter adaptador;
             adaptador = new SqlDataAdapter(consulta, connexio);
 
             connexio.Open();
@@ -157,7 +157,7 @@ namespace ConnexioBD
         {
             Connectar();
 
-            SqlDataAdapter adaptador;
+            //SqlDataAdapter adaptador;
             adaptador = new SqlDataAdapter(consulta, connexio);
 
             connexio.Open();

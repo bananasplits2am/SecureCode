@@ -11,7 +11,7 @@ using System.Reflection;
 
 namespace LlencaAplicacions
 {
-    public partial class SWLlenca: UserControl
+    public partial class SWLlenca : UserControl
     {
         public SWLlenca()
         {
@@ -28,8 +28,18 @@ namespace LlencaAplicacions
             }
         }
 
+        private String _Rang;
+        public String Rang
+        {
+            get { return _Rang; }
+            set
+            {
+                _Rang = value;
+            }
+        }
+
         private String _Classe;
-        public String Classe
+        public String Classe //namespace
         {
             get { return _Classe; }
             set
@@ -39,7 +49,7 @@ namespace LlencaAplicacions
         }
 
         private String _Form;
-        public String Form
+        public String Form //formulari a ensenyar
         {
             get { return _Form; }
             set
@@ -48,26 +58,36 @@ namespace LlencaAplicacions
             }
         }
 
-        //--------------------------------------------------------------
+        //intentar que el namespace i el nom del formulari sigui el mateix
 
-        private String _Finestra_ensenyar;
-        public String Finestra_ensenyar
-        {
-            get { return _Finestra_ensenyar; }
-            set
-            {
-                _Finestra_ensenyar = value;
-            }
-        }
+        //--------------------------------------------------------------
 
         private void SWLlenca_Load(object sender, EventArgs e)
         {
+            //int user = 50;
+            //if (int.Parse(Rang) <= int.Parse(User)) {  //el 10 es el valor del usuari, es canviara per una variable
             Label.Text = Titol;
+            //} else
+            //{
+            //    this.Hide();
+            //}
         }
 
         private void SWLlenca_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Finestra_ensenyar);
+            //MessageBox.Show(Form);
+            //reflection
+
+            Object dllBD;
+            Type tipus;
+
+            Assembly ensamblat = Assembly.LoadFile(@"" + Classe + ".dll");
+
+            tipus = ensamblat.GetType(Classe + "." + Form);
+
+            dllBD = Activator.CreateInstance(tipus);
+
+            ((Form)dllBD).Show();
         }
     }
 }

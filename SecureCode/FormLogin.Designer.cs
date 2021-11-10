@@ -57,10 +57,9 @@ namespace SecureCode
             this.LabelLogin.BackColor = System.Drawing.Color.Transparent;
             this.LabelLogin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelLogin.ForeColor = System.Drawing.Color.White;
-            this.LabelLogin.Location = new System.Drawing.Point(80, 45);
-            this.LabelLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LabelLogin.Location = new System.Drawing.Point(53, 29);
             this.LabelLogin.Name = "LabelLogin";
-            this.LabelLogin.Size = new System.Drawing.Size(166, 57);
+            this.LabelLogin.Size = new System.Drawing.Size(111, 37);
             this.LabelLogin.TabIndex = 0;
             this.LabelLogin.Text = "Login";
             // 
@@ -69,10 +68,9 @@ namespace SecureCode
             this.LabelLoginWelcome.BackColor = System.Drawing.Color.Transparent;
             this.LabelLoginWelcome.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelLoginWelcome.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LabelLoginWelcome.Location = new System.Drawing.Point(81, 102);
-            this.LabelLoginWelcome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LabelLoginWelcome.Location = new System.Drawing.Point(54, 66);
             this.LabelLoginWelcome.Name = "LabelLoginWelcome";
-            this.LabelLoginWelcome.Size = new System.Drawing.Size(344, 35);
+            this.LabelLoginWelcome.Size = new System.Drawing.Size(229, 23);
             this.LabelLoginWelcome.TabIndex = 0;
             this.LabelLoginWelcome.Text = "Benvingut al Secure Code";
             // 
@@ -81,10 +79,9 @@ namespace SecureCode
             this.LabelName.BackColor = System.Drawing.Color.Transparent;
             this.LabelName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelName.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LabelName.Location = new System.Drawing.Point(84, 202);
-            this.LabelName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LabelName.Location = new System.Drawing.Point(56, 131);
             this.LabelName.Name = "LabelName";
-            this.LabelName.Size = new System.Drawing.Size(86, 35);
+            this.LabelName.Size = new System.Drawing.Size(57, 23);
             this.LabelName.TabIndex = 0;
             this.LabelName.Text = "Nom";
             // 
@@ -94,9 +91,8 @@ namespace SecureCode
             this.PanelLoginTop.Controls.Add(this.ButtonCloseApp);
             this.PanelLoginTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelLoginTop.Location = new System.Drawing.Point(0, 0);
-            this.PanelLoginTop.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PanelLoginTop.Name = "PanelLoginTop";
-            this.PanelLoginTop.Size = new System.Drawing.Size(600, 46);
+            this.PanelLoginTop.Size = new System.Drawing.Size(400, 30);
             this.PanelLoginTop.TabIndex = 1;
             this.PanelLoginTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelLoginTop_MouseDown);
             this.PanelLoginTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelLoginTop_MouseMove);
@@ -110,10 +106,10 @@ namespace SecureCode
             this.ButtonCloseApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.ButtonCloseApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonCloseApp.ForeColor = System.Drawing.Color.White;
-            this.ButtonCloseApp.Location = new System.Drawing.Point(488, 0);
+            this.ButtonCloseApp.Location = new System.Drawing.Point(325, 0);
             this.ButtonCloseApp.Margin = new System.Windows.Forms.Padding(0);
             this.ButtonCloseApp.Name = "ButtonCloseApp";
-            this.ButtonCloseApp.Size = new System.Drawing.Size(112, 46);
+            this.ButtonCloseApp.Size = new System.Drawing.Size(75, 30);
             this.ButtonCloseApp.TabIndex = 1;
             this.ButtonCloseApp.Text = "X";
             this.ButtonCloseApp.UseMnemonic = false;
@@ -125,20 +121,18 @@ namespace SecureCode
             this.TextBoxName.AcceptsReturn = true;
             this.TextBoxName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TextBoxName.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBoxName.Location = new System.Drawing.Point(87, 242);
-            this.TextBoxName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TextBoxName.Location = new System.Drawing.Point(58, 157);
             this.TextBoxName.Name = "TextBoxName";
-            this.TextBoxName.Size = new System.Drawing.Size(413, 35);
+            this.TextBoxName.Size = new System.Drawing.Size(276, 26);
             this.TextBoxName.TabIndex = 3;
             // 
             // TextBoxPassword
             // 
             this.TextBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TextBoxPassword.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBoxPassword.Location = new System.Drawing.Point(87, 354);
-            this.TextBoxPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TextBoxPassword.Location = new System.Drawing.Point(58, 230);
             this.TextBoxPassword.Name = "TextBoxPassword";
-            this.TextBoxPassword.Size = new System.Drawing.Size(412, 35);
+            this.TextBoxPassword.Size = new System.Drawing.Size(275, 26);
             this.TextBoxPassword.TabIndex = 5;
             this.TextBoxPassword.UseSystemPasswordChar = true;
             this.TextBoxPassword.TextChanged += new System.EventHandler(this.TextBoxPassword_TextChanged);
@@ -149,10 +143,9 @@ namespace SecureCode
             this.LabelPassword.BackColor = System.Drawing.Color.Transparent;
             this.LabelPassword.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelPassword.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LabelPassword.Location = new System.Drawing.Point(84, 314);
-            this.LabelPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LabelPassword.Location = new System.Drawing.Point(56, 204);
             this.LabelPassword.Name = "LabelPassword";
-            this.LabelPassword.Size = new System.Drawing.Size(201, 35);
+            this.LabelPassword.Size = new System.Drawing.Size(134, 23);
             this.LabelPassword.TabIndex = 4;
             this.LabelPassword.Text = "Contrasenya";
             // 
@@ -160,10 +153,9 @@ namespace SecureCode
             // 
             this.LabelIncorrectLogin.AutoSize = true;
             this.LabelIncorrectLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(28)))), ((int)(((byte)(36)))));
-            this.LabelIncorrectLogin.Location = new System.Drawing.Point(190, 469);
-            this.LabelIncorrectLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LabelIncorrectLogin.Location = new System.Drawing.Point(127, 305);
             this.LabelIncorrectLogin.Name = "LabelIncorrectLogin";
-            this.LabelIncorrectLogin.Size = new System.Drawing.Size(0, 20);
+            this.LabelIncorrectLogin.Size = new System.Drawing.Size(0, 13);
             this.LabelIncorrectLogin.TabIndex = 6;
             // 
             // ButtonLogIn
@@ -174,10 +166,9 @@ namespace SecureCode
             this.ButtonLogIn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
             this.ButtonLogIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonLogIn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonLogIn.Location = new System.Drawing.Point(208, 485);
-            this.ButtonLogIn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ButtonLogIn.Location = new System.Drawing.Point(139, 315);
             this.ButtonLogIn.Name = "ButtonLogIn";
-            this.ButtonLogIn.Size = new System.Drawing.Size(200, 40);
+            this.ButtonLogIn.Size = new System.Drawing.Size(133, 26);
             this.ButtonLogIn.TabIndex = 7;
             this.ButtonLogIn.Text = "Accedir";
             this.ButtonLogIn.UseVisualStyleBackColor = false;
@@ -190,10 +181,9 @@ namespace SecureCode
             this.ButtonCheckPassword.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
             this.ButtonCheckPassword.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
             this.ButtonCheckPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonCheckPassword.Location = new System.Drawing.Point(458, 359);
-            this.ButtonCheckPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ButtonCheckPassword.Location = new System.Drawing.Point(305, 233);
             this.ButtonCheckPassword.Name = "ButtonCheckPassword";
-            this.ButtonCheckPassword.Size = new System.Drawing.Size(37, 29);
+            this.ButtonCheckPassword.Size = new System.Drawing.Size(25, 19);
             this.ButtonCheckPassword.TabIndex = 8;
             this.ButtonCheckPassword.Text = "👁 ";
             this.ButtonCheckPassword.UseVisualStyleBackColor = false;
@@ -212,10 +202,9 @@ namespace SecureCode
             this.PanelGeneralInformation.Controls.Add(this.LabelPassword);
             this.PanelGeneralInformation.Controls.Add(this.TextBoxName);
             this.PanelGeneralInformation.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelGeneralInformation.Location = new System.Drawing.Point(0, 46);
-            this.PanelGeneralInformation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PanelGeneralInformation.Location = new System.Drawing.Point(0, 30);
             this.PanelGeneralInformation.Name = "PanelGeneralInformation";
-            this.PanelGeneralInformation.Size = new System.Drawing.Size(600, 529);
+            this.PanelGeneralInformation.Size = new System.Drawing.Size(400, 344);
             this.PanelGeneralInformation.TabIndex = 9;
             // 
             // LabelWelcomeText
@@ -223,10 +212,9 @@ namespace SecureCode
             this.LabelWelcomeText.AutoSize = true;
             this.LabelWelcomeText.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelWelcomeText.ForeColor = System.Drawing.Color.White;
-            this.LabelWelcomeText.Location = new System.Drawing.Point(82, 598);
-            this.LabelWelcomeText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LabelWelcomeText.Location = new System.Drawing.Point(55, 389);
             this.LabelWelcomeText.Name = "LabelWelcomeText";
-            this.LabelWelcomeText.Size = new System.Drawing.Size(0, 28);
+            this.LabelWelcomeText.Size = new System.Drawing.Size(0, 18);
             this.LabelWelcomeText.TabIndex = 10;
             this.LabelWelcomeText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -239,9 +227,10 @@ namespace SecureCode
             // 
             this.pictureBoxGIf.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxGIf.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxGIf.Image")));
-            this.pictureBoxGIf.Location = new System.Drawing.Point(208, 583);
+            this.pictureBoxGIf.Location = new System.Drawing.Point(139, 379);
+            this.pictureBoxGIf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBoxGIf.Name = "pictureBoxGIf";
-            this.pictureBoxGIf.Size = new System.Drawing.Size(181, 92);
+            this.pictureBoxGIf.Size = new System.Drawing.Size(121, 60);
             this.pictureBoxGIf.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxGIf.TabIndex = 11;
             this.pictureBoxGIf.TabStop = false;
@@ -249,18 +238,17 @@ namespace SecureCode
             // 
             // FormLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(29)))), ((int)(((byte)(47)))));
             this.BackgroundImage = global::SecureCode.Properties.Resources.Fons_Reduit;
-            this.ClientSize = new System.Drawing.Size(600, 760);
+            this.ClientSize = new System.Drawing.Size(400, 494);
             this.Controls.Add(this.pictureBoxGIf);
             this.Controls.Add(this.LabelWelcomeText);
             this.Controls.Add(this.LabelIncorrectLogin);
             this.Controls.Add(this.PanelGeneralInformation);
             this.Controls.Add(this.PanelLoginTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLogin";
