@@ -37,7 +37,7 @@ namespace ConnexioBD
             }
         }
 
-        public void PortarTaula(String choosen_table) //retorna un dataset amb els registres de la taula
+        public DataSet PortarTaula(String choosen_table) //retorna un dataset amb els registres de la taula
         {
             Connectar();
 
@@ -49,9 +49,11 @@ namespace ConnexioBD
             dts = new DataSet();
             adaptador.Fill(dts, "BD"); //el nom que volguem
             connexio.Close();
+
+            return dts;
         }
 
-        public void PortarperConsulta(String consulta) //Rep Consulta i torna DataSet
+        public DataSet PortarperConsulta(String consulta) //Rep Consulta i torna DataSet
         {
             Connectar();
 
@@ -62,6 +64,8 @@ namespace ConnexioBD
             dts = new DataSet();
             adaptador.Fill(dts, "BD"); //el nom que volguem
             connexio.Close();
+
+            return dts;
         }
 
         public void Actualitzar()
@@ -105,11 +109,51 @@ namespace ConnexioBD
 
             return compare_values;
         }
+
+        public String[] DatosUsuario(String user)
+        {
+            String consulta = "Select idUserRank, idUserCategory, UserName from Users Where Login like ('" + user + "')";
+
+            PortarperConsulta(consulta);
+            String[] DatoUser = new string[3];
+
+            DatoUser[0] = dts.Tables["BD"].Rows[0][2].ToString(); //Guardamos el nombre del usuario
+            DatoUser[1] = dts.Tables["BD"].Rows[0][1].ToString(); //Guardamos el idCategory
+            DatoUser[2] = dts.Tables["BD"].Rows[0][0].ToString(); //Guardamos el idRank
+
+
+            return DatoUser;
+        }
+
+        public String RangoUsuarioNombre(String IdRango)
+        {
+            String consulta = "Select idUserRank, DescRank from UserRanks Where idUserRank = " + IdRango + "";
+            String RangoNombre;
+
+            PortarperConsulta(consulta);
+            RangoNombre = dts.Tables["BD"].Rows[0][1].ToString();
+
+            return RangoNombre;
+             
+        }
+
+        public int CategoriaUsuariNumero(String IdCategory)
+        {
+            String consulta = "Select idUserCategory, AccessLevel from UserCategories Where idUserCategory = " + IdCategory + "";
+            String SAccesLevel;
+            int IAccesLevel;
+
+            PortarperConsulta(consulta);
+            SAccesLevel = dts.Tables["BD"].Rows[0][1].ToString();
+            IAccesLevel = Int32.Parse(SAccesLevel);
+
+            return IAccesLevel;
+        }
     }
 
     public class ClassHederat : ClasseMain
     {
-        public void PortarperConsulta(String consulta, String nomDataTable) //Rep Consulta, nom a la DataTable i torna DataSet
+        public DataSet PortarperConsulta(String consulta, String nomDataTable) //Rep Consulta, nom a la DataTable i torna DataSet
         {
             Connectar();
 
@@ -120,6 +164,8 @@ namespace ConnexioBD
             dts = new DataSet();
             adaptador.Fill(dts, nomDataTable); //el nom que volguem
             connexio.Close();
+
+            return dts;
         }
     }
 

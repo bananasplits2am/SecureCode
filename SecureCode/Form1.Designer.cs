@@ -49,6 +49,8 @@ namespace SecureCode
             this.labelEmpresa = new System.Windows.Forms.Label();
             this.labelAny = new System.Windows.Forms.Label();
             this.labelVersio = new System.Windows.Forms.Label();
+            this.labelFraseRango = new System.Windows.Forms.Label();
+            this.labelRango = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).BeginInit();
             this.panel2.SuspendLayout();
@@ -71,6 +73,8 @@ namespace SecureCode
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.labelRango);
+            this.panel1.Controls.Add(this.labelFraseRango);
             this.panel1.Controls.Add(this.buttonTencarSessio);
             this.panel1.Controls.Add(this.LabelUserName);
             this.panel1.Controls.Add(this.pictureUser);
@@ -105,7 +109,7 @@ namespace SecureCode
             // 
             this.LabelUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LabelUserName.AutoSize = true;
-            this.LabelUserName.Location = new System.Drawing.Point(65, 580);
+            this.LabelUserName.Location = new System.Drawing.Point(16, 581);
             this.LabelUserName.Name = "LabelUserName";
             this.LabelUserName.Size = new System.Drawing.Size(52, 20);
             this.LabelUserName.TabIndex = 2;
@@ -309,6 +313,29 @@ namespace SecureCode
             this.labelVersio.TabIndex = 0;
             this.labelVersio.Text = "Versió 1.0.1";
             // 
+            // labelFraseRango
+            // 
+            this.labelFraseRango.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelFraseRango.AutoSize = true;
+            this.labelFraseRango.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFraseRango.ForeColor = System.Drawing.Color.White;
+            this.labelFraseRango.Location = new System.Drawing.Point(11, 480);
+            this.labelFraseRango.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelFraseRango.Name = "labelFraseRango";
+            this.labelFraseRango.Size = new System.Drawing.Size(97, 24);
+            this.labelFraseRango.TabIndex = 5;
+            this.labelFraseRango.Text = "Tu rango es";
+            // 
+            // labelRango
+            // 
+            this.labelRango.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelRango.AutoSize = true;
+            this.labelRango.Location = new System.Drawing.Point(106, 484);
+            this.labelRango.Name = "labelRango";
+            this.labelRango.Size = new System.Drawing.Size(52, 20);
+            this.labelRango.TabIndex = 6;
+            this.labelRango.Text = "*rank*";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -360,6 +387,8 @@ namespace SecureCode
         private System.Windows.Forms.Label labelAny;
         private System.Windows.Forms.Label labelVersio;
         private System.Windows.Forms.Button buttonTencarSessio;
+        private System.Windows.Forms.Label labelFraseRango;
+        private System.Windows.Forms.Label labelRango;
     }
 }
 

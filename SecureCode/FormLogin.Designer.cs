@@ -98,6 +98,9 @@ namespace SecureCode
             this.PanelLoginTop.Name = "PanelLoginTop";
             this.PanelLoginTop.Size = new System.Drawing.Size(600, 46);
             this.PanelLoginTop.TabIndex = 1;
+            this.PanelLoginTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelLoginTop_MouseDown);
+            this.PanelLoginTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelLoginTop_MouseMove);
+            this.PanelLoginTop.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelLoginTop_MouseUp);
             // 
             // ButtonCloseApp
             // 
@@ -139,6 +142,7 @@ namespace SecureCode
             this.TextBoxPassword.TabIndex = 5;
             this.TextBoxPassword.UseSystemPasswordChar = true;
             this.TextBoxPassword.TextChanged += new System.EventHandler(this.TextBoxPassword_TextChanged);
+            this.TextBoxPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxPassword_KeyPress);
             // 
             // LabelPassword
             // 
@@ -260,6 +264,7 @@ namespace SecureCode
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLogin";
+            this.Load += new System.EventHandler(this.FormLogin_Load);
             this.PanelLoginTop.ResumeLayout(false);
             this.PanelGeneralInformation.ResumeLayout(false);
             this.PanelGeneralInformation.PerformLayout();

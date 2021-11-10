@@ -14,14 +14,18 @@ namespace SecureCode
 {
     public partial class FormLogin : Form
     {
-        public static String Username;
+        public static String[] DatosUser;
+        public static String nombreRango;
+        public static int acceslevel;
+        private bool arrastrar = false;
+        private Point posicionInicio = new Point(0, 0);
         bool comprobant = false;
         ConnexioBD.ClassHederat cls = new ConnexioBD.ClassHederat();
 
         public FormLogin()
         {
             InitializeComponent();
-            Username = "";
+            //Username[0] = "";
         }
 
         private void ButtonCloseApp_Click(object sender, EventArgs e)
@@ -47,7 +51,7 @@ namespace SecureCode
 
             cls.PortarperConsulta(consulta);
 
-            return cls.comprobar_psswd(TextBoxName.Text, TextBoxPassword.Text);
+            return cls.comprobar_psswd(TextBoxName.Text.Trim(), TextBoxPassword.Text.Trim());
         }
 
         private void ButtonCheckPassword_Click(object sender, EventArgs e)
@@ -68,7 +72,9 @@ namespace SecureCode
 
             if (comprobant == true)
             {
-                Username = TextBoxName.Text;
+                DatosUser = cls.DatosUsuario(TextBoxName.Text.Trim());
+                nombreRango = cls.RangoUsuarioNombre(DatosUser[2]);
+                acceslevel = cls.CategoriaUsuariNumero(DatosUser[1]);
                 this.Hide();
                 MainForm frmmain = new MainForm();
                 frmmain.ShowDialog();
@@ -76,6 +82,7 @@ namespace SecureCode
             }
             else
             {
+                LabelIncorrectLogin.ForeColor = Color.Red;
                 LabelIncorrectLogin.Text = "Usuari i/o contrasenya incorrectes";
             }
             
@@ -91,6 +98,43 @@ namespace SecureCode
             {
                 ButtonCheckPassword.Visible = false;
                 TextBoxPassword.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+            LabelIncorrectLogin.ForeColor = Color.White;
+            LabelIncorrectLogin.Text = "Benvingut a BananSplit";
+        }
+
+        private void PanelLoginTop_MouseDown(object sender, MouseEventArgs e)
+        {
+            arrastrar = true;
+            posicionInicio = new Point(e.X, e.Y);
+        }
+
+        private void PanelLoginTop_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (arrastrar)
+            {
+                Point p = PointToScreen(e.Location);
+                Location = new Point(p.X - this.posicionInicio.X, p.Y - this.posicionInicio.Y);
+            }
+        }
+
+        private void PanelLoginTop_MouseUp(object sender, MouseEventArgs e)
+        {
+            arrastrar = false;
+        }
+
+        private void TextBoxPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                pictureBoxGIf.Visible = true;
+                TimerLogin.Enabled = true;
+
+                comprobant = ComprbarUsuari();
             }
         }
     }

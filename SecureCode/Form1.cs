@@ -13,12 +13,15 @@ namespace SecureCode
     public partial class MainForm : Form
     {
         private bool arrastrar = false;
+        int acceslevel = FormLogin.acceslevel;
         private Point posicionInicio = new Point(0, 0);
         public MainForm()
         {
             InitializeComponent();
             LabelUser.Text = "Sessió iniciada com a";
-            LabelUserName.Text = FormLogin.Username;
+            labelRango.Text = FormLogin.nombreRango;
+            LabelUserName.Text = FormLogin.DatosUser[0];
+            //MessageBox.Show(acceslevel.ToString());
         }
 
         private void buttonMin_Click(object sender, EventArgs e)
@@ -93,8 +96,7 @@ namespace SecureCode
         }
 
         private void panel2_MouseMove(object sender, MouseEventArgs e)
-        {
-            
+        {           
             if (arrastrar)
             {
                 Point p = PointToScreen(e.Location);
