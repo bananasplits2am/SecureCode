@@ -94,12 +94,13 @@ namespace SecureCode
             // 
             this.labelRango.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelRango.AutoSize = true;
-            this.labelRango.Location = new System.Drawing.Point(71, 315);
+            this.labelRango.Location = new System.Drawing.Point(71, 314);
             this.labelRango.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelRango.Name = "labelRango";
             this.labelRango.Size = new System.Drawing.Size(36, 13);
             this.labelRango.TabIndex = 6;
             this.labelRango.Text = "*rank*";
+            this.labelRango.Click += new System.EventHandler(this.labelRango_Click);
             // 
             // labelFraseRango
             // 
@@ -120,7 +121,7 @@ namespace SecureCode
             this.buttonTencarSessio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTencarSessio.ForeColor = System.Drawing.Color.Gray;
             this.buttonTencarSessio.Location = new System.Drawing.Point(10, 448);
-            this.buttonTencarSessio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonTencarSessio.Margin = new System.Windows.Forms.Padding(2);
             this.buttonTencarSessio.Name = "buttonTencarSessio";
             this.buttonTencarSessio.Size = new System.Drawing.Size(100, 26);
             this.buttonTencarSessio.TabIndex = 3;
@@ -144,7 +145,7 @@ namespace SecureCode
             this.pictureUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureUser.Image = ((System.Drawing.Image)(resources.GetObject("pictureUser.Image")));
             this.pictureUser.Location = new System.Drawing.Point(37, 393);
-            this.pictureUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureUser.Margin = new System.Windows.Forms.Padding(2);
             this.pictureUser.Name = "pictureUser";
             this.pictureUser.Size = new System.Drawing.Size(50, 49);
             this.pictureUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -232,7 +233,7 @@ namespace SecureCode
             this.panel2.ForeColor = System.Drawing.Color.Transparent;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(880, 30);
+            this.panel2.Size = new System.Drawing.Size(867, 30);
             this.panel2.TabIndex = 2;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel2_MouseDown);
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
@@ -240,32 +241,32 @@ namespace SecureCode
             // 
             // buttonClose
             // 
-            this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonClose.AutoSize = true;
             this.buttonClose.BackColor = System.Drawing.Color.Gray;
             this.buttonClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonClose.BackgroundImage")));
             this.buttonClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClose.ForeColor = System.Drawing.Color.Gray;
-            this.buttonClose.Location = new System.Drawing.Point(844, -1);
+            this.buttonClose.Location = new System.Drawing.Point(837, 0);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(35, 33);
+            this.buttonClose.Size = new System.Drawing.Size(31, 31);
             this.buttonClose.TabIndex = 2;
             this.buttonClose.UseVisualStyleBackColor = false;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // buttonMin
             // 
-            this.buttonMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonMin.AutoSize = true;
             this.buttonMin.BackColor = System.Drawing.Color.Gray;
             this.buttonMin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonMin.BackgroundImage")));
             this.buttonMin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonMin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMin.ForeColor = System.Drawing.Color.Gray;
-            this.buttonMin.Location = new System.Drawing.Point(809, -2);
+            this.buttonMin.Location = new System.Drawing.Point(805, -1);
             this.buttonMin.Name = "buttonMin";
-            this.buttonMin.Size = new System.Drawing.Size(36, 34);
+            this.buttonMin.Size = new System.Drawing.Size(34, 34);
             this.buttonMin.TabIndex = 1;
             this.buttonMin.UseVisualStyleBackColor = false;
             this.buttonMin.Click += new System.EventHandler(this.buttonMin_Click);
@@ -273,15 +274,16 @@ namespace SecureCode
             // buttonInfo
             // 
             this.buttonInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonInfo.AutoSize = true;
             this.buttonInfo.BackColor = System.Drawing.Color.Gray;
             this.buttonInfo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonInfo.BackgroundImage")));
             this.buttonInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonInfo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonInfo.ForeColor = System.Drawing.Color.Gray;
-            this.buttonInfo.Location = new System.Drawing.Point(776, -1);
+            this.buttonInfo.Location = new System.Drawing.Point(775, 1);
             this.buttonInfo.Name = "buttonInfo";
-            this.buttonInfo.Size = new System.Drawing.Size(35, 33);
+            this.buttonInfo.Size = new System.Drawing.Size(30, 30);
             this.buttonInfo.TabIndex = 0;
             this.buttonInfo.UseVisualStyleBackColor = false;
             this.buttonInfo.Click += new System.EventHandler(this.buttonInfo_Click);
@@ -367,6 +369,7 @@ namespace SecureCode
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panelInfo.ResumeLayout(false);
             this.panelInfo.PerformLayout();
             this.ResumeLayout(false);

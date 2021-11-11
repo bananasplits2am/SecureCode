@@ -75,10 +75,10 @@ namespace SecureCode
                 DatosUser = cls.DatosUsuario(TextBoxName.Text.Trim());
                 nombreRango = cls.RangoUsuarioNombre(DatosUser[2]);
                 acceslevel = cls.CategoriaUsuariNumero(DatosUser[1]);
-                this.Hide();
+                TimerLogin.Stop();                        //repetit a dalt 5 linies mas o menos
+                this.Close();                                //this.Hide();
                 MainForm frmmain = new MainForm();
-                frmmain.ShowDialog();
-
+                frmmain.Show(); //frmmain.ShowDialog();
             }
             else
             {
