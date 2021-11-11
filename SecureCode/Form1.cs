@@ -89,5 +89,10 @@ namespace SecureCode
         {
             arrastrar = false;
         }
+
+        private void swLlenca1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

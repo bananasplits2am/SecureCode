@@ -75,15 +75,19 @@ namespace LlencaAplicacions
 
         private void SWLlenca_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show(Form);
+            MessageBox.Show("it activates the reflection class");
             //reflection
 
             Object dllBD;
             Type tipus;
+            /*String codi = Classe + ".dll";
 
-            Assembly ensamblat = Assembly.LoadFile(@"" + Classe + ".dll");
+            Assembly ensamblat = Assembly.LoadFile(@codi);
 
-            tipus = ensamblat.GetType(Classe + "." + Form);
+            tipus = ensamblat.GetType(Classe + "." + Form);*/
+
+            Assembly ensamblat = Assembly.LoadFrom(@"\bin\Debug\AccesDades.dll");
+            tipus = ensamblat.GetType("AccessDades.Formulari");
 
             dllBD = Activator.CreateInstance(tipus);
 

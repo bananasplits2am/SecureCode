@@ -33,6 +33,8 @@ namespace SecureCode
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.LabelUser = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelRango = new System.Windows.Forms.Label();
+            this.labelFraseRango = new System.Windows.Forms.Label();
             this.buttonTencarSessio = new System.Windows.Forms.Button();
             this.LabelUserName = new System.Windows.Forms.Label();
             this.pictureUser = new System.Windows.Forms.PictureBox();
@@ -49,7 +51,7 @@ namespace SecureCode
             this.labelEmpresa = new System.Windows.Forms.Label();
             this.labelAny = new System.Windows.Forms.Label();
             this.labelVersio = new System.Windows.Forms.Label();
-            this.swLlenca1 = new LlencaAplicacions.SWLlenca();
+            this.LlencaAplicacionsAD = new LlencaAplicacions.SWLlenca();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).BeginInit();
             this.panel2.SuspendLayout();
@@ -71,6 +73,8 @@ namespace SecureCode
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.labelRango);
+            this.panel1.Controls.Add(this.labelFraseRango);
             this.panel1.Controls.Add(this.buttonTencarSessio);
             this.panel1.Controls.Add(this.LabelUserName);
             this.panel1.Controls.Add(this.pictureUser);
@@ -86,6 +90,29 @@ namespace SecureCode
             this.panel1.Size = new System.Drawing.Size(121, 481);
             this.panel1.TabIndex = 1;
             // 
+            // labelRango
+            // 
+            this.labelRango.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelRango.AutoSize = true;
+            this.labelRango.Location = new System.Drawing.Point(71, 315);
+            this.labelRango.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelRango.Name = "labelRango";
+            this.labelRango.Size = new System.Drawing.Size(36, 13);
+            this.labelRango.TabIndex = 6;
+            this.labelRango.Text = "*rank*";
+            // 
+            // labelFraseRango
+            // 
+            this.labelFraseRango.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelFraseRango.AutoSize = true;
+            this.labelFraseRango.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFraseRango.ForeColor = System.Drawing.Color.White;
+            this.labelFraseRango.Location = new System.Drawing.Point(7, 312);
+            this.labelFraseRango.Name = "labelFraseRango";
+            this.labelFraseRango.Size = new System.Drawing.Size(66, 16);
+            this.labelFraseRango.TabIndex = 5;
+            this.labelFraseRango.Text = "Tu rango es";
+            // 
             // buttonTencarSessio
             // 
             this.buttonTencarSessio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -93,7 +120,7 @@ namespace SecureCode
             this.buttonTencarSessio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTencarSessio.ForeColor = System.Drawing.Color.Gray;
             this.buttonTencarSessio.Location = new System.Drawing.Point(10, 448);
-            this.buttonTencarSessio.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonTencarSessio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonTencarSessio.Name = "buttonTencarSessio";
             this.buttonTencarSessio.Size = new System.Drawing.Size(100, 26);
             this.buttonTencarSessio.TabIndex = 3;
@@ -105,7 +132,7 @@ namespace SecureCode
             // 
             this.LabelUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LabelUserName.AutoSize = true;
-            this.LabelUserName.Location = new System.Drawing.Point(43, 377);
+            this.LabelUserName.Location = new System.Drawing.Point(11, 378);
             this.LabelUserName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LabelUserName.Name = "LabelUserName";
             this.LabelUserName.Size = new System.Drawing.Size(35, 13);
@@ -117,7 +144,7 @@ namespace SecureCode
             this.pictureUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureUser.Image = ((System.Drawing.Image)(resources.GetObject("pictureUser.Image")));
             this.pictureUser.Location = new System.Drawing.Point(37, 393);
-            this.pictureUser.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureUser.Name = "pictureUser";
             this.pictureUser.Size = new System.Drawing.Size(50, 49);
             this.pictureUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -302,19 +329,20 @@ namespace SecureCode
             this.labelVersio.TabIndex = 0;
             this.labelVersio.Text = "Versió 1.0.1";
             // 
-            // swLlenca1
+            // LlencaAplicacionsAD
             // 
-            this.swLlenca1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.swLlenca1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(1)))));
-            this.swLlenca1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.swLlenca1.Classe = null;
-            this.swLlenca1.Form = null;
-            this.swLlenca1.Location = new System.Drawing.Point(127, 38);
-            this.swLlenca1.Name = "swLlenca1";
-            this.swLlenca1.Rang = null;
-            this.swLlenca1.Size = new System.Drawing.Size(136, 57);
-            this.swLlenca1.TabIndex = 4;
-            this.swLlenca1.Titol = null;
+            this.LlencaAplicacionsAD.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.LlencaAplicacionsAD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(1)))));
+            this.LlencaAplicacionsAD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LlencaAplicacionsAD.Classe = "AccesDades";
+            this.LlencaAplicacionsAD.Form = "Formulari";
+            this.LlencaAplicacionsAD.Location = new System.Drawing.Point(177, 68);
+            this.LlencaAplicacionsAD.Name = "LlencaAplicacionsAD";
+            this.LlencaAplicacionsAD.Rang = "100";
+            this.LlencaAplicacionsAD.Size = new System.Drawing.Size(136, 57);
+            this.LlencaAplicacionsAD.TabIndex = 4;
+            this.LlencaAplicacionsAD.Titol = "Accés a Dades";
+            this.LlencaAplicacionsAD.Load += new System.EventHandler(this.swLlenca1_Load);
             // 
             // MainForm
             // 
@@ -323,7 +351,7 @@ namespace SecureCode
             this.BackColor = System.Drawing.Color.Gray;
             this.BackgroundImage = global::SecureCode.Properties.Resources.Fons;
             this.ClientSize = new System.Drawing.Size(867, 481);
-            this.Controls.Add(this.swLlenca1);
+            this.Controls.Add(this.LlencaAplicacionsAD);
             this.Controls.Add(this.panelInfo);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -364,7 +392,9 @@ namespace SecureCode
         private System.Windows.Forms.Label labelAny;
         private System.Windows.Forms.Label labelVersio;
         private System.Windows.Forms.Button buttonTencarSessio;
-        private LlencaAplicacions.SWLlenca swLlenca1;
+        private System.Windows.Forms.Label labelFraseRango;
+        private System.Windows.Forms.Label labelRango;
+        private LlencaAplicacions.SWLlenca LlencaAplicacionsAD;
     }
 }
 

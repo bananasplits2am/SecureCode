@@ -50,10 +50,10 @@ namespace LlencaAplicacions
             // Label
             // 
             this.Label.AutoSize = true;
-            this.Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label.Location = new System.Drawing.Point(39, 23);
             this.Label.Name = "Label";
-            this.Label.Size = new System.Drawing.Size(68, 16);
+            this.Label.Size = new System.Drawing.Size(60, 15);
             this.Label.TabIndex = 1;
             this.Label.Text = "Accés a X";
             // 

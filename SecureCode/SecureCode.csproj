@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AccesDades">
-      <HintPath>..\AccesDades\bin\Debug\AccesDades.dll</HintPath>
-    </Reference>
     <Reference Include="LlencaAplicacions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Controls\LlencaAplicacions\bin\Debug\LlencaAplicacions.dll</HintPath>
@@ -131,6 +128,10 @@
     <None Include="Resources\Banana no background - còpia.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AccesDades\AccesDades.csproj">
+      <Project>{53a45661-a89c-47b1-a112-185f382ef6b8}</Project>
+      <Name>AccesDades</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ConnexioBD\ConnexioBD.csproj">
       <Project>{8077036b-b090-464f-bda5-82c43cd4ca3d}</Project>
       <Name>ConnexioBD</Name>

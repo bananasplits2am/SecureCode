@@ -16,9 +16,7 @@ D:\Documents\2021-2022\Projectes\AccesDades\obj\Debug\AccesDades.Formulari.resou
 D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\AccesDades\bin\Debug\AccesDades.dll.config
 D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\AccesDades\bin\Debug\AccesDades.dll
 D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\AccesDades\bin\Debug\AccesDades.pdb
-D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\AccesDades\bin\Debug\LlencaAplicacions.dll
 D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\AccesDades\bin\Debug\SWTextbox.dll
-D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\AccesDades\bin\Debug\LlencaAplicacions.pdb
 D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\AccesDades\bin\Debug\SWTextbox.pdb
 D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\AccesDades\obj\Debug\AccesDades.csprojAssemblyReference.cache
 D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\AccesDades\obj\Debug\AccesDades.Formulari.resources
@@ -28,3 +26,5 @@ D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\AccesDa
 D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\AccesDades\obj\Debug\AccesDades.csproj.CopyComplete
 D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\AccesDades\obj\Debug\AccesDades.dll
 D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\AccesDades\obj\Debug\AccesDades.pdb
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\AccesDades\bin\Debug\LlencaAplicacions.dll
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\AccesDades\bin\Debug\LlencaAplicacions.pdb
