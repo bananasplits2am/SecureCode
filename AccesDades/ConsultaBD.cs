@@ -45,7 +45,7 @@ namespace AccesDades
 
             connexio.Open();
             dts = new DataSet();
-            adaptador.Fill(dts, "Chamo"); //el nom que volguem
+            adaptador.Fill(dts, "BananaSplit"); //el nom que volguem
             connexio.Close();
 
             DataGridView.DataSource = dts.Tables[0];
