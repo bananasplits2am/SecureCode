@@ -22,6 +22,7 @@ namespace SecureCode
             LabelUser.Text = "Sessió iniciada com a";
             labelRango.Text = FormLogin.nombreRango;
             LabelUserName.Text = FormLogin.DatosUser[0];
+            //this.pictureUser.Image = System.Drawing.Image.FromFile(FormLogin.photo);
             //MessageBox.Show(acceslevel.ToString());
         }
 

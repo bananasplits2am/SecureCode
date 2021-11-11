@@ -28,3 +28,18 @@ D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\AccesDa
 D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\AccesDades\obj\Debug\AccesDades.pdb
 D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\AccesDades\bin\Debug\LlencaAplicacions.dll
 D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\AccesDades\bin\Debug\LlencaAplicacions.pdb
+C:\Users\sforc\OneDrive\Documentos\GitHub\SecureCode\AccesDades\bin\Debug\AccesDades.dll.config
+C:\Users\sforc\OneDrive\Documentos\GitHub\SecureCode\AccesDades\bin\Debug\AccesDades.dll
+C:\Users\sforc\OneDrive\Documentos\GitHub\SecureCode\AccesDades\bin\Debug\AccesDades.pdb
+C:\Users\sforc\OneDrive\Documentos\GitHub\SecureCode\AccesDades\bin\Debug\LlencaAplicacions.dll
+C:\Users\sforc\OneDrive\Documentos\GitHub\SecureCode\AccesDades\bin\Debug\SWTextbox.dll
+C:\Users\sforc\OneDrive\Documentos\GitHub\SecureCode\AccesDades\bin\Debug\LlencaAplicacions.pdb
+C:\Users\sforc\OneDrive\Documentos\GitHub\SecureCode\AccesDades\bin\Debug\SWTextbox.pdb
+C:\Users\sforc\OneDrive\Documentos\GitHub\SecureCode\AccesDades\obj\Debug\AccesDades.csproj.AssemblyReference.cache
+C:\Users\sforc\OneDrive\Documentos\GitHub\SecureCode\AccesDades\obj\Debug\AccesDades.Formulari.resources
+C:\Users\sforc\OneDrive\Documentos\GitHub\SecureCode\AccesDades\obj\Debug\AccesDades.Properties.Resources.resources
+C:\Users\sforc\OneDrive\Documentos\GitHub\SecureCode\AccesDades\obj\Debug\AccesDades.csproj.GenerateResource.cache
+C:\Users\sforc\OneDrive\Documentos\GitHub\SecureCode\AccesDades\obj\Debug\AccesDades.csproj.CoreCompileInputs.cache
+C:\Users\sforc\OneDrive\Documentos\GitHub\SecureCode\AccesDades\obj\Debug\AccesDades.csproj.CopyComplete
+C:\Users\sforc\OneDrive\Documentos\GitHub\SecureCode\AccesDades\obj\Debug\AccesDades.dll
+C:\Users\sforc\OneDrive\Documentos\GitHub\SecureCode\AccesDades\obj\Debug\AccesDades.pdb

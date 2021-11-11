@@ -149,6 +149,17 @@ namespace ConnexioBD
 
             return IAccesLevel;
         }
+
+        public String FotoUsuario(String user)
+        {
+            String consulta = "Select photo from Users Where Login like ('" + user + "')";
+            String FotoUsuario;
+
+            PortarperConsulta(consulta);
+            FotoUsuario = dts.Tables["BD"].Rows[0][0].ToString();
+
+            return FotoUsuario;
+        } 
     }
 
     public class ClassHederat : ClasseMain
