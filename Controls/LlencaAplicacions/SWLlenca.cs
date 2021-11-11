@@ -78,20 +78,27 @@ namespace LlencaAplicacions
             MessageBox.Show("it activates the reflection class");
             //reflection
 
-            Object dllBD;
-            Type tipus;
-            /*String codi = Classe + ".dll";
+            try {
 
-            Assembly ensamblat = Assembly.LoadFile(@codi);
+                Object dllBD;
+                Type tipus;
+                /*String codi = Classe + ".dll";
 
-            tipus = ensamblat.GetType(Classe + "." + Form);*/
+                Assembly ensamblat = Assembly.LoadFile(@codi);
 
-            Assembly ensamblat = Assembly.LoadFrom(@"\bin\Debug\AccesDades.dll");
-            tipus = ensamblat.GetType("AccessDades.Formulari");
+                tipus = ensamblat.GetType(Classe + "." + Form);*/
 
-            dllBD = Activator.CreateInstance(tipus);
+                Assembly ensamblat = Assembly.LoadFrom(@"AccesDades.dll");       //                Assembly ensamblat = Assembly.LoadFrom(@"\bin\Debug\AccesDades.dll");
+                tipus = ensamblat.GetType("AccesDades.Formulari");
 
-            ((Form)dllBD).Show();
+                dllBD = Activator.CreateInstance(tipus);
+
+                ((Form)dllBD).Show();
+
+            } catch (Exception exception) {
+                MessageBox.Show(exception.ToString());
+            }
+            
         }
     }
 }

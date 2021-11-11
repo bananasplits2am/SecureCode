@@ -95,5 +95,10 @@ namespace SecureCode
         {
 
         }
+
+        private void labelRango_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

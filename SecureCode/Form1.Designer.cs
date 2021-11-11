@@ -41,7 +41,6 @@ namespace SecureCode
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.Button1 = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonClose = new System.Windows.Forms.Button();
@@ -52,6 +51,7 @@ namespace SecureCode
             this.labelAny = new System.Windows.Forms.Label();
             this.labelVersio = new System.Windows.Forms.Label();
             this.LlencaAplicacionsAD = new LlencaAplicacions.SWLlenca();
+            this.Button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).BeginInit();
             this.panel2.SuspendLayout();
@@ -73,33 +73,34 @@ namespace SecureCode
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.LlencaAplicacionsAD);
             this.panel1.Controls.Add(this.labelRango);
             this.panel1.Controls.Add(this.labelFraseRango);
+            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.buttonTencarSessio);
-            this.panel1.Controls.Add(this.LabelUserName);
-            this.panel1.Controls.Add(this.pictureUser);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.LabelUserName);
+            this.panel1.Controls.Add(this.pictureUser);
             this.panel1.Controls.Add(this.LabelUser);
-            this.panel1.Controls.Add(this.Button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(121, 481);
+            this.panel1.Size = new System.Drawing.Size(142, 481);
             this.panel1.TabIndex = 1;
             // 
             // labelRango
             // 
             this.labelRango.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelRango.AutoSize = true;
-            this.labelRango.Location = new System.Drawing.Point(71, 315);
+            this.labelRango.Location = new System.Drawing.Point(71, 314);
             this.labelRango.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelRango.Name = "labelRango";
             this.labelRango.Size = new System.Drawing.Size(36, 13);
             this.labelRango.TabIndex = 6;
             this.labelRango.Text = "*rank*";
+            this.labelRango.Click += new System.EventHandler(this.labelRango_Click);
             // 
             // labelFraseRango
             // 
@@ -120,7 +121,7 @@ namespace SecureCode
             this.buttonTencarSessio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTencarSessio.ForeColor = System.Drawing.Color.Gray;
             this.buttonTencarSessio.Location = new System.Drawing.Point(10, 448);
-            this.buttonTencarSessio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonTencarSessio.Margin = new System.Windows.Forms.Padding(2);
             this.buttonTencarSessio.Name = "buttonTencarSessio";
             this.buttonTencarSessio.Size = new System.Drawing.Size(100, 26);
             this.buttonTencarSessio.TabIndex = 3;
@@ -144,7 +145,7 @@ namespace SecureCode
             this.pictureUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureUser.Image = ((System.Drawing.Image)(resources.GetObject("pictureUser.Image")));
             this.pictureUser.Location = new System.Drawing.Point(37, 393);
-            this.pictureUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureUser.Margin = new System.Windows.Forms.Padding(2);
             this.pictureUser.Name = "pictureUser";
             this.pictureUser.Size = new System.Drawing.Size(50, 49);
             this.pictureUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -159,7 +160,7 @@ namespace SecureCode
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.button2.FlatAppearance.BorderSize = 2;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(5, 96);
+            this.button2.Location = new System.Drawing.Point(14, 101);
             this.button2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 0);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(111, 53);
@@ -175,7 +176,7 @@ namespace SecureCode
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.button3.FlatAppearance.BorderSize = 2;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(5, 154);
+            this.button3.Location = new System.Drawing.Point(14, 159);
             this.button3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 0);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(111, 53);
@@ -191,29 +192,13 @@ namespace SecureCode
             this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.button4.FlatAppearance.BorderSize = 2;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(5, 212);
+            this.button4.Location = new System.Drawing.Point(14, 217);
             this.button4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 0);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(111, 53);
             this.button4.TabIndex = 1;
             this.button4.Text = "Opció 4";
             this.button4.UseVisualStyleBackColor = false;
-            // 
-            // Button1
-            // 
-            this.Button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(27)))), ((int)(((byte)(33)))));
-            this.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.Button1.FlatAppearance.BorderSize = 2;
-            this.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Button1.Location = new System.Drawing.Point(5, 38);
-            this.Button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 0);
-            this.Button1.Name = "Button1";
-            this.Button1.Size = new System.Drawing.Size(111, 53);
-            this.Button1.TabIndex = 0;
-            this.Button1.Text = "Opció 1";
-            this.Button1.UseVisualStyleBackColor = false;
             // 
             // imageList1
             // 
@@ -232,7 +217,7 @@ namespace SecureCode
             this.panel2.ForeColor = System.Drawing.Color.Transparent;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(880, 30);
+            this.panel2.Size = new System.Drawing.Size(867, 30);
             this.panel2.TabIndex = 2;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel2_MouseDown);
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
@@ -247,9 +232,9 @@ namespace SecureCode
             this.buttonClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClose.ForeColor = System.Drawing.Color.Gray;
-            this.buttonClose.Location = new System.Drawing.Point(844, -1);
+            this.buttonClose.Location = new System.Drawing.Point(837, 1);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(35, 33);
+            this.buttonClose.Size = new System.Drawing.Size(31, 31);
             this.buttonClose.TabIndex = 2;
             this.buttonClose.UseVisualStyleBackColor = false;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
@@ -263,9 +248,9 @@ namespace SecureCode
             this.buttonMin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMin.ForeColor = System.Drawing.Color.Gray;
-            this.buttonMin.Location = new System.Drawing.Point(809, -2);
+            this.buttonMin.Location = new System.Drawing.Point(805, 1);
             this.buttonMin.Name = "buttonMin";
-            this.buttonMin.Size = new System.Drawing.Size(36, 34);
+            this.buttonMin.Size = new System.Drawing.Size(34, 34);
             this.buttonMin.TabIndex = 1;
             this.buttonMin.UseVisualStyleBackColor = false;
             this.buttonMin.Click += new System.EventHandler(this.buttonMin_Click);
@@ -279,9 +264,9 @@ namespace SecureCode
             this.buttonInfo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonInfo.ForeColor = System.Drawing.Color.Gray;
-            this.buttonInfo.Location = new System.Drawing.Point(776, -1);
+            this.buttonInfo.Location = new System.Drawing.Point(775, 1);
             this.buttonInfo.Name = "buttonInfo";
-            this.buttonInfo.Size = new System.Drawing.Size(35, 33);
+            this.buttonInfo.Size = new System.Drawing.Size(30, 30);
             this.buttonInfo.TabIndex = 0;
             this.buttonInfo.UseVisualStyleBackColor = false;
             this.buttonInfo.Click += new System.EventHandler(this.buttonInfo_Click);
@@ -336,13 +321,29 @@ namespace SecureCode
             this.LlencaAplicacionsAD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LlencaAplicacionsAD.Classe = "AccesDades";
             this.LlencaAplicacionsAD.Form = "Formulari";
-            this.LlencaAplicacionsAD.Location = new System.Drawing.Point(177, 68);
+            this.LlencaAplicacionsAD.Location = new System.Drawing.Point(3, 36);
             this.LlencaAplicacionsAD.Name = "LlencaAplicacionsAD";
             this.LlencaAplicacionsAD.Rang = "100";
             this.LlencaAplicacionsAD.Size = new System.Drawing.Size(136, 57);
             this.LlencaAplicacionsAD.TabIndex = 4;
             this.LlencaAplicacionsAD.Titol = "Accés a Dades";
             this.LlencaAplicacionsAD.Load += new System.EventHandler(this.swLlenca1_Load);
+            // 
+            // Button1
+            // 
+            this.Button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(27)))), ((int)(((byte)(33)))));
+            this.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.Button1.FlatAppearance.BorderSize = 2;
+            this.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Button1.Location = new System.Drawing.Point(379, 393);
+            this.Button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 0);
+            this.Button1.Name = "Button1";
+            this.Button1.Size = new System.Drawing.Size(111, 53);
+            this.Button1.TabIndex = 0;
+            this.Button1.Text = "Opció 1";
+            this.Button1.UseVisualStyleBackColor = false;
             // 
             // MainForm
             // 
@@ -351,10 +352,10 @@ namespace SecureCode
             this.BackColor = System.Drawing.Color.Gray;
             this.BackgroundImage = global::SecureCode.Properties.Resources.Fons;
             this.ClientSize = new System.Drawing.Size(867, 481);
-            this.Controls.Add(this.LlencaAplicacionsAD);
             this.Controls.Add(this.panelInfo);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.Button1);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
@@ -379,7 +380,6 @@ namespace SecureCode
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button Button1;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.PictureBox pictureUser;
         private System.Windows.Forms.Label LabelUserName;
@@ -395,6 +395,7 @@ namespace SecureCode
         private System.Windows.Forms.Label labelFraseRango;
         private System.Windows.Forms.Label labelRango;
         private LlencaAplicacions.SWLlenca LlencaAplicacionsAD;
+        private System.Windows.Forms.Button Button1;
     }
 }
 

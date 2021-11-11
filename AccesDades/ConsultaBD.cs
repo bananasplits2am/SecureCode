@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace AccesDades
 {
@@ -18,6 +19,7 @@ namespace AccesDades
         private String consulta;
         private bool check_nou;
         DataSet dts;
+        private ConnectionStringSettings conf = ConfigurationManager.ConnectionStrings["BananaSplit"];
 
         public Formulari()
         {
@@ -26,22 +28,24 @@ namespace AccesDades
 
         private void Connectar()
         {
-            String codi;
-            codi = "Data Source=DESKTOP-1NA7VLL\\SQLEXPRESS;Initial Catalog=bdBannanaSplit;Integrated Security=True";
-            connexio = new SqlConnection(codi);
+            if (conf != null)
+            {
+                String codi = conf.ConnectionString;
+                connexio = new SqlConnection(codi);
+            }
         }
-
+ 
         private void Portardades()
         {
             Connectar();
 
             SqlDataAdapter adaptador;
-            consulta = "Select * From Agencies";
+            consulta = "Select * From Planets";
             adaptador = new SqlDataAdapter(consulta, connexio);
 
             connexio.Open();
             dts = new DataSet();
-            adaptador.Fill(dts, "Chamo"); //el nom que volguem
+            adaptador.Fill(dts, "BananaSplit"); //el nom que volguem
             connexio.Close();
 
             DataGridView.DataSource = dts.Tables[0];
@@ -87,12 +91,12 @@ namespace AccesDades
             //netejar el enllaç
             TextBoxCodi.DataBindings.Clear();
             //el primer valor, el de text és el del filtre es la propietat que vlem importar, el segon la base de dades a la que fem referència, i el últim el valor que ha d tindre a la base de dades
-            TextBoxCodi.DataBindings.Add("Text", dts.Tables[0], "CodeAgency");
+            TextBoxCodi.DataBindings.Add("Text", dts.Tables[0], "CodePlanet");
             //crear el event de validar que es relaciona amb la línia de sota
             TextBoxCodi.Validated += new System.EventHandler(this.ValidarTextBox);
 
             TextBoxDescripcio.DataBindings.Clear();
-            TextBoxDescripcio.DataBindings.Add("Text", dts.Tables[0], "DescAgency");
+            TextBoxDescripcio.DataBindings.Add("Text", dts.Tables[0], "DescPlanet");
             TextBoxDescripcio.Validated += new System.EventHandler(ValidarTextBox);
         }
 

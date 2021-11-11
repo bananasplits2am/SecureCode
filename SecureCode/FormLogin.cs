@@ -15,7 +15,7 @@ namespace SecureCode
     public partial class FormLogin : Form
     {
         public static String[] DatosUser;
-        public static String nombreRango, photo;
+        public static String nombreRango;
         public static int acceslevel;
         private bool arrastrar = false;
         private Point posicionInicio = new Point(0, 0);
@@ -46,13 +46,12 @@ namespace SecureCode
 
         private bool ComprbarUsuari()
         {
-            //String Name = TextBoxName.Text;
             //TextBoxName.Text.Equals("1") && TextBoxPassword.Text.Equals("2")
-            String consulta = "Select Login, Password From users Where Login like ('" + TextBoxName.Text.Trim() + "') and Password like ('" + TextBoxPassword.Text + "')";
+            String consulta = "Select Login, Password From users Where Login like ('" + TextBoxName.Text + "') and Password like ('" + TextBoxPassword.Text + "')";
 
             cls.PortarperConsulta(consulta);
 
-            return cls.comprobar_psswd(TextBoxName.Text.Trim(), TextBoxPassword.Text);
+            return cls.comprobar_psswd(TextBoxName.Text.Trim(), TextBoxPassword.Text.Trim());
         }
 
         private void ButtonCheckPassword_Click(object sender, EventArgs e)
@@ -76,11 +75,10 @@ namespace SecureCode
                 DatosUser = cls.DatosUsuario(TextBoxName.Text.Trim());
                 nombreRango = cls.RangoUsuarioNombre(DatosUser[2]);
                 acceslevel = cls.CategoriaUsuariNumero(DatosUser[1]);
-                photo = cls.FotoUsuario(TextBoxName.Text.Trim());
-                this.Hide();
+                TimerLogin.Stop();                        //repetit a dalt 5 linies mas o menos
+                this.Close();                                //this.Hide();
                 MainForm frmmain = new MainForm();
-                frmmain.ShowDialog();
-
+                frmmain.Show(); //frmmain.ShowDialog();
             }
             else
             {
