@@ -32,16 +32,16 @@ namespace SecureCode
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.LabelUser = new System.Windows.Forms.Label();
-            this.PanelButton = new System.Windows.Forms.Panel();
+            this.ControlPanel = new System.Windows.Forms.Panel();
             this.LlencaAplicacionsAD = new LlencaAplicacions.SWLlenca();
             this.labelRango = new System.Windows.Forms.Label();
             this.labelFraseRango = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.buttonTencarSessio = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.LabelUserName = new System.Windows.Forms.Label();
             this.pictureUser = new System.Windows.Forms.PictureBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonClose = new System.Windows.Forms.Button();
@@ -52,7 +52,8 @@ namespace SecureCode
             this.labelAny = new System.Windows.Forms.Label();
             this.labelVersio = new System.Windows.Forms.Label();
             this.Button1 = new System.Windows.Forms.Button();
-            this.PanelButton.SuspendLayout();
+            this.PanelButton = new System.Windows.Forms.Panel();
+            this.ControlPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).BeginInit();
             this.panel2.SuspendLayout();
             this.panelInfo.SuspendLayout();
@@ -70,22 +71,24 @@ namespace SecureCode
             this.LabelUser.TabIndex = 3;
             this.LabelUser.Text = "Sessio Iniciada com";
             // 
-            // PanelButton
+            // ControlPanel
             // 
-            this.PanelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.PanelButton.Controls.Add(this.LlencaAplicacionsAD);
-            this.PanelButton.Controls.Add(this.labelRango);
-            this.PanelButton.Controls.Add(this.labelFraseRango);
-            this.PanelButton.Controls.Add(this.buttonTencarSessio);
-            this.PanelButton.Controls.Add(this.LabelUserName);
-            this.PanelButton.Controls.Add(this.pictureUser);
-            this.PanelButton.Controls.Add(this.LabelUser);
-            this.PanelButton.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PanelButton.ForeColor = System.Drawing.Color.White;
-            this.PanelButton.Location = new System.Drawing.Point(0, 0);
-            this.PanelButton.Name = "PanelButton";
-            this.PanelButton.Size = new System.Drawing.Size(142, 481);
-            this.PanelButton.TabIndex = 1;
+            this.ControlPanel.AutoSize = true;
+            this.ControlPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.ControlPanel.Controls.Add(this.labelRango);
+            this.ControlPanel.Controls.Add(this.PanelButton);
+            this.ControlPanel.Controls.Add(this.labelFraseRango);
+            this.ControlPanel.Controls.Add(this.buttonTencarSessio);
+            this.ControlPanel.Controls.Add(this.LabelUserName);
+            this.ControlPanel.Controls.Add(this.pictureUser);
+            this.ControlPanel.Controls.Add(this.LabelUser);
+            this.ControlPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ControlPanel.ForeColor = System.Drawing.Color.White;
+            this.ControlPanel.Location = new System.Drawing.Point(0, 0);
+            this.ControlPanel.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.ControlPanel.Name = "ControlPanel";
+            this.ControlPanel.Size = new System.Drawing.Size(126, 481);
+            this.ControlPanel.TabIndex = 1;
             // 
             // LlencaAplicacionsAD
             // 
@@ -95,7 +98,7 @@ namespace SecureCode
             this.LlencaAplicacionsAD.Classe = "AccesDades";
             this.LlencaAplicacionsAD.ForeColor = System.Drawing.Color.Black;
             this.LlencaAplicacionsAD.Form = "Formulari";
-            this.LlencaAplicacionsAD.Location = new System.Drawing.Point(3, 36);
+            this.LlencaAplicacionsAD.Location = new System.Drawing.Point(190, 107);
             this.LlencaAplicacionsAD.Name = "LlencaAplicacionsAD";
             this.LlencaAplicacionsAD.Rang = "100";
             this.LlencaAplicacionsAD.Size = new System.Drawing.Size(136, 57);
@@ -127,6 +130,44 @@ namespace SecureCode
             this.labelFraseRango.TabIndex = 5;
             this.labelFraseRango.Text = "Tu rango es";
             // 
+            // buttonTencarSessio
+            // 
+            this.buttonTencarSessio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonTencarSessio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonTencarSessio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTencarSessio.ForeColor = System.Drawing.Color.Gray;
+            this.buttonTencarSessio.Location = new System.Drawing.Point(10, 448);
+            this.buttonTencarSessio.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonTencarSessio.Name = "buttonTencarSessio";
+            this.buttonTencarSessio.Size = new System.Drawing.Size(100, 26);
+            this.buttonTencarSessio.TabIndex = 3;
+            this.buttonTencarSessio.Text = "Tencar sessió";
+            this.buttonTencarSessio.UseVisualStyleBackColor = false;
+            this.buttonTencarSessio.Click += new System.EventHandler(this.buttonTencarSessio_Click);
+            // 
+            // LabelUserName
+            // 
+            this.LabelUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.LabelUserName.AutoSize = true;
+            this.LabelUserName.Location = new System.Drawing.Point(11, 378);
+            this.LabelUserName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LabelUserName.Name = "LabelUserName";
+            this.LabelUserName.Size = new System.Drawing.Size(35, 13);
+            this.LabelUserName.TabIndex = 2;
+            this.LabelUserName.Text = "*user*";
+            // 
+            // pictureUser
+            // 
+            this.pictureUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureUser.Image = ((System.Drawing.Image)(resources.GetObject("pictureUser.Image")));
+            this.pictureUser.Location = new System.Drawing.Point(37, 393);
+            this.pictureUser.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureUser.Name = "pictureUser";
+            this.pictureUser.Size = new System.Drawing.Size(50, 49);
+            this.pictureUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureUser.TabIndex = 4;
+            this.pictureUser.TabStop = false;
+            // 
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -142,21 +183,6 @@ namespace SecureCode
             this.button4.TabIndex = 1;
             this.button4.Text = "Opció 4";
             this.button4.UseVisualStyleBackColor = false;
-            // 
-            // buttonTencarSessio
-            // 
-            this.buttonTencarSessio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonTencarSessio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.buttonTencarSessio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTencarSessio.ForeColor = System.Drawing.Color.Gray;
-            this.buttonTencarSessio.Location = new System.Drawing.Point(10, 448);
-            this.buttonTencarSessio.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonTencarSessio.Name = "buttonTencarSessio";
-            this.buttonTencarSessio.Size = new System.Drawing.Size(100, 26);
-            this.buttonTencarSessio.TabIndex = 3;
-            this.buttonTencarSessio.Text = "Tencar sessió";
-            this.buttonTencarSessio.UseVisualStyleBackColor = false;
-            this.buttonTencarSessio.Click += new System.EventHandler(this.buttonTencarSessio_Click);
             // 
             // button2
             // 
@@ -189,29 +215,6 @@ namespace SecureCode
             this.button3.TabIndex = 2;
             this.button3.Text = "Opció 3";
             this.button3.UseVisualStyleBackColor = false;
-            // 
-            // LabelUserName
-            // 
-            this.LabelUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.LabelUserName.AutoSize = true;
-            this.LabelUserName.Location = new System.Drawing.Point(11, 378);
-            this.LabelUserName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.LabelUserName.Name = "LabelUserName";
-            this.LabelUserName.Size = new System.Drawing.Size(35, 13);
-            this.LabelUserName.TabIndex = 2;
-            this.LabelUserName.Text = "*user*";
-            // 
-            // pictureUser
-            // 
-            this.pictureUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureUser.Image = ((System.Drawing.Image)(resources.GetObject("pictureUser.Image")));
-            this.pictureUser.Location = new System.Drawing.Point(37, 393);
-            this.pictureUser.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureUser.Name = "pictureUser";
-            this.pictureUser.Size = new System.Drawing.Size(50, 49);
-            this.pictureUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureUser.TabIndex = 4;
-            this.pictureUser.TabStop = false;
             // 
             // imageList1
             // 
@@ -343,6 +346,19 @@ namespace SecureCode
             this.Button1.Text = "Opció 1";
             this.Button1.UseVisualStyleBackColor = false;
             // 
+            // PanelButton
+            // 
+            this.PanelButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.PanelButton.AutoSize = true;
+            this.PanelButton.BackColor = System.Drawing.Color.Transparent;
+            this.PanelButton.Location = new System.Drawing.Point(0, 30);
+            this.PanelButton.Margin = new System.Windows.Forms.Padding(0);
+            this.PanelButton.Name = "PanelButton";
+            this.PanelButton.Padding = new System.Windows.Forms.Padding(5);
+            this.PanelButton.Size = new System.Drawing.Size(126, 279);
+            this.PanelButton.TabIndex = 4;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -350,13 +366,14 @@ namespace SecureCode
             this.BackColor = System.Drawing.Color.Gray;
             this.BackgroundImage = global::SecureCode.Properties.Resources.Fons;
             this.ClientSize = new System.Drawing.Size(867, 481);
+            this.Controls.Add(this.LlencaAplicacionsAD);
             this.Controls.Add(this.panelInfo);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.PanelButton);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.Button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
+            this.Controls.Add(this.ControlPanel);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
@@ -365,18 +382,19 @@ namespace SecureCode
             this.Text = "Formulari";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainForm_Load);
-            this.PanelButton.ResumeLayout(false);
-            this.PanelButton.PerformLayout();
+            this.ControlPanel.ResumeLayout(false);
+            this.ControlPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panelInfo.ResumeLayout(false);
             this.panelInfo.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel PanelButton;
+        private System.Windows.Forms.Panel ControlPanel;
         private System.Windows.Forms.Label LabelUser;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
@@ -397,6 +415,7 @@ namespace SecureCode
         private System.Windows.Forms.Label labelRango;
         private LlencaAplicacions.SWLlenca LlencaAplicacionsAD;
         private System.Windows.Forms.Button Button1;
+        private System.Windows.Forms.Panel PanelButton;
     }
 }
 

@@ -160,6 +160,47 @@ namespace ConnexioBD
 
             return FotoUsuario;
         } 
+
+        public int row_count(String consulta)
+        {
+            int contador = 0;
+
+            PortarperConsulta(consulta);
+            foreach (DataRow dts in dts.Tables["BD"].Rows)
+            {
+                contador++;
+            }
+
+            return contador;
+        }
+
+        public int column_count(String consulta)
+        {
+            int contador = 0;
+
+            PortarperConsulta(consulta);
+            foreach (DataColumn dts in dts.Tables["BD"].Columns)
+            {
+                contador++;
+            }
+
+            return contador;
+        }
+        public String[,] store_dts_to_array(String[,] DadesBoto)
+        {
+            for (int i = 0; i < DadesBoto.GetLength(0); i++)
+            {
+                for (int j = 0; j < DadesBoto.GetLength(1); j++)
+                {
+                    DadesBoto[i,j] = dts.Tables["BD"].Rows[i][j].ToString();
+                }
+            }
+            
+            //DadesBoto[0] = dts.Tables["BD"].Rows[0][2].ToString();
+
+            return DadesBoto;
+        }
+
     }
 
     public class ClassHederat : ClasseMain

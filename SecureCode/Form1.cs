@@ -15,6 +15,7 @@ namespace SecureCode
         private bool arrastrar = false;
         int acceslevel = FormLogin.acceslevel;
         private Point posicionInicio = new Point(0, 0);
+        ConnexioBD.ClassHederat cls = new ConnexioBD.ClassHederat();        //conectarnos a la classe ClasseConnexioBD.cs
 
         public MainForm()
         {
@@ -22,8 +23,8 @@ namespace SecureCode
             LabelUser.Text = "Sessió iniciada com a";
             labelRango.Text = FormLogin.nombreRango;
             LabelUserName.Text = FormLogin.DatosUser[0];
-            //this.pictureUser.Image = System.Drawing.Image.FromFile(FormLogin.photo);
-            //MessageBox.Show(acceslevel.ToString());
+            //this.pictureUser.Image = System.Drawing.Image.FromFile(FormLogin.photo);          //FOTO USUARI, per ara res perque tan sols funciona quan el usuari està en local
+            //MessageBox.Show(acceslevel.ToString());                                           //CHECK USER ACCESS LEVEL
         }
 
         private void buttonMin_Click(object sender, EventArgs e)
@@ -59,7 +60,7 @@ namespace SecureCode
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-           //pictureUser.
+            InitializeCustomButtons(acceslevel);
         }
 
         private void buttonTencarSessio_Click(object sender, EventArgs e)
@@ -98,7 +99,56 @@ namespace SecureCode
 
         private void labelRango_Click(object sender, EventArgs e)
         {
+            
+        }
 
+        private void InitializeCustomButtons(int acceslevel)
+        {
+            String consulta = "Select * From CustomControlBotons";
+            int nombre_botons, atributs_botons;
+
+            nombre_botons = cls.row_count(consulta);
+            atributs_botons = cls.column_count(consulta);
+
+            String[,] DadesBoto = new string[nombre_botons, atributs_botons];
+
+            DadesBoto = cls.store_dts_to_array(DadesBoto);
+
+            crear_botons_vector(DadesBoto);
+
+            //emmagatzemar els valors en el vector
+            //treure els valors en un for each
+            //crear el boto
+            //afegir els atributs al boto
+        }
+
+        private void crear_botons_vector(String[,] vector)
+        {
+            for (int i = 0; i < vector.GetLength(0); i++)
+            {
+                LlencaAplicacions.SWLlenca boto_bd = new LlencaAplicacions.SWLlenca();
+
+                //La columna 0 no s'utilitza perque es on tenim el valor emmagatzemat del ID, no ens interessa per a crear la taula
+                boto_bd.Name = vector[i, 1];
+                boto_bd.Titol = vector[i, 2];
+                boto_bd.Rang = vector[i, 3];
+                boto_bd.Form = vector[i, 4];
+                boto_bd.Classe = vector[i, 5];
+                //int number_color = int.Parse(vector[i, 6], System.Globalization.NumberStyles.AllowThousands);
+                //boto_bd.BackColor = Color.FromArgb(number_color);        //vector[i, 6].ToString();
+                boto_bd.BackColor = Color.Red;
+                boto_bd.Anchor = (AnchorStyles.Top | AnchorStyles.Left);
+                boto_bd.Height = 57;
+                boto_bd.Width = 136;
+                boto_bd.Margin = new Padding(3, 5, 3, 3);
+                boto_bd.AutoSize = true;
+                //boto_bd.Size = Size.Parse(vector[i, 8]);
+                //boto_bd.Size = Size(Size.Parse(vector[i, 8]));
+                //Int32.Parse(vector[i, 6]);
+
+                PanelButton.Controls.Add(boto_bd);
+                boto_bd.Dock = DockStyle.Top;
+            }
         }
     }
 }
