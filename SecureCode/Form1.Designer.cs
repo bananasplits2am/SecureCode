@@ -33,15 +33,11 @@ namespace SecureCode
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.LabelUser = new System.Windows.Forms.Label();
             this.ControlPanel = new System.Windows.Forms.Panel();
-            this.LlencaAplicacionsAD = new LlencaAplicacions.SWLlenca();
             this.labelRango = new System.Windows.Forms.Label();
             this.labelFraseRango = new System.Windows.Forms.Label();
             this.buttonTencarSessio = new System.Windows.Forms.Button();
             this.LabelUserName = new System.Windows.Forms.Label();
             this.pictureUser = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonClose = new System.Windows.Forms.Button();
@@ -51,7 +47,6 @@ namespace SecureCode
             this.labelEmpresa = new System.Windows.Forms.Label();
             this.labelAny = new System.Windows.Forms.Label();
             this.labelVersio = new System.Windows.Forms.Label();
-            this.Button1 = new System.Windows.Forms.Button();
             this.PanelButton = new System.Windows.Forms.Panel();
             this.ControlPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).BeginInit();
@@ -87,24 +82,8 @@ namespace SecureCode
             this.ControlPanel.Location = new System.Drawing.Point(0, 0);
             this.ControlPanel.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
             this.ControlPanel.Name = "ControlPanel";
-            this.ControlPanel.Size = new System.Drawing.Size(126, 481);
+            this.ControlPanel.Size = new System.Drawing.Size(153, 481);
             this.ControlPanel.TabIndex = 1;
-            // 
-            // LlencaAplicacionsAD
-            // 
-            this.LlencaAplicacionsAD.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.LlencaAplicacionsAD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(27)))), ((int)(((byte)(33)))));
-            this.LlencaAplicacionsAD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LlencaAplicacionsAD.Classe = "AccesDades";
-            this.LlencaAplicacionsAD.ForeColor = System.Drawing.Color.Black;
-            this.LlencaAplicacionsAD.Form = "Formulari";
-            this.LlencaAplicacionsAD.Location = new System.Drawing.Point(190, 107);
-            this.LlencaAplicacionsAD.Name = "LlencaAplicacionsAD";
-            this.LlencaAplicacionsAD.Rang = "100";
-            this.LlencaAplicacionsAD.Size = new System.Drawing.Size(136, 57);
-            this.LlencaAplicacionsAD.TabIndex = 4;
-            this.LlencaAplicacionsAD.Titol = "Accés a Dades";
-            this.LlencaAplicacionsAD.Load += new System.EventHandler(this.swLlenca1_Load);
             // 
             // labelRango
             // 
@@ -167,54 +146,6 @@ namespace SecureCode
             this.pictureUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureUser.TabIndex = 4;
             this.pictureUser.TabStop = false;
-            // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(1)))));
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button4.FlatAppearance.BorderSize = 2;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(742, 393);
-            this.button4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(111, 53);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Opció 4";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(98)))), ((int)(((byte)(4)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(500, 393);
-            this.button2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 53);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Opció 2";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(147)))), ((int)(((byte)(0)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button3.FlatAppearance.BorderSize = 2;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(621, 393);
-            this.button3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(111, 53);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Opció 3";
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // imageList1
             // 
@@ -330,33 +261,18 @@ namespace SecureCode
             this.labelVersio.TabIndex = 0;
             this.labelVersio.Text = "Versió 1.0.1";
             // 
-            // Button1
-            // 
-            this.Button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(27)))), ((int)(((byte)(33)))));
-            this.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.Button1.FlatAppearance.BorderSize = 2;
-            this.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Button1.Location = new System.Drawing.Point(379, 393);
-            this.Button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 0);
-            this.Button1.Name = "Button1";
-            this.Button1.Size = new System.Drawing.Size(111, 53);
-            this.Button1.TabIndex = 0;
-            this.Button1.Text = "Opció 1";
-            this.Button1.UseVisualStyleBackColor = false;
-            // 
             // PanelButton
             // 
             this.PanelButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.PanelButton.AutoScroll = true;
             this.PanelButton.AutoSize = true;
             this.PanelButton.BackColor = System.Drawing.Color.Transparent;
             this.PanelButton.Location = new System.Drawing.Point(0, 30);
             this.PanelButton.Margin = new System.Windows.Forms.Padding(0);
             this.PanelButton.Name = "PanelButton";
             this.PanelButton.Padding = new System.Windows.Forms.Padding(5);
-            this.PanelButton.Size = new System.Drawing.Size(126, 279);
+            this.PanelButton.Size = new System.Drawing.Size(153, 279);
             this.PanelButton.TabIndex = 4;
             // 
             // MainForm
@@ -366,13 +282,8 @@ namespace SecureCode
             this.BackColor = System.Drawing.Color.Gray;
             this.BackgroundImage = global::SecureCode.Properties.Resources.Fons;
             this.ClientSize = new System.Drawing.Size(867, 481);
-            this.Controls.Add(this.LlencaAplicacionsAD);
             this.Controls.Add(this.panelInfo);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.Button1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.ControlPanel);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -396,9 +307,6 @@ namespace SecureCode
         #endregion
         private System.Windows.Forms.Panel ControlPanel;
         private System.Windows.Forms.Label LabelUser;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.PictureBox pictureUser;
         private System.Windows.Forms.Label LabelUserName;
@@ -413,8 +321,6 @@ namespace SecureCode
         private System.Windows.Forms.Button buttonTencarSessio;
         private System.Windows.Forms.Label labelFraseRango;
         private System.Windows.Forms.Label labelRango;
-        private LlencaAplicacions.SWLlenca LlencaAplicacionsAD;
-        private System.Windows.Forms.Button Button1;
         private System.Windows.Forms.Panel PanelButton;
     }
 }
