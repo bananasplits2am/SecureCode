@@ -114,7 +114,7 @@ namespace SecureCode
 
             DadesBoto = cls.store_dts_to_array(DadesBoto);
 
-            crear_botons_vector(DadesBoto);
+            crear_botons_vector(DadesBoto, acceslevel);
 
             //emmagatzemar els valors en el vector
             //treure els valors en un for each
@@ -122,36 +122,41 @@ namespace SecureCode
             //afegir els atributs al boto
         }
 
-        private void crear_botons_vector(String[,] vector)
+        private void crear_botons_vector(String[,] vector, int acceslevel)
         {
+            //MessageBox.Show(acceslevel.ToString());
             for (int i = 0; i < vector.GetLength(0); i++)
             {
-                LlencaAplicacions.SWLlenca boto_bd = new LlencaAplicacions.SWLlenca();
+                if (Int32.Parse(vector[i, 3]) <= acceslevel)
+                {
+                    LlencaAplicacions.SWLlenca boto_bd = new LlencaAplicacions.SWLlenca();
 
-                //La columna 0 no s'utilitza perque es on tenim el valor emmagatzemat del ID, no ens interessa per a crear la taula
-                boto_bd.Name = vector[i, 1];
-                boto_bd.Titol = vector[i, 2];
-                boto_bd.Rang = vector[i, 3];
-                boto_bd.Form = vector[i, 4];
-                boto_bd.Classe = vector[i, 5];
-                //int number_color = int.Parse(vector[i, 6], System.Globalization.NumberStyles.AllowThousands);
-                //boto_bd.BackColor = Color.FromArgb(number_color);        //vector[i, 6].ToString();
-                //boto_bd.BackColor = Color.Red;
-                boto_bd.BackColor = ColorTranslator.FromHtml(vector[i, 6]);
-                //boto_bd.Anchor = (AnchorStyles.Top | AnchorStyles.Left);
-                boto_bd.Height = 57;
-                boto_bd.Width = 136;
-                boto_bd.Margin = new Padding(3, 50, 3, 3);
-                //boto_bd.Padding = new Padding(10, 0, 10, 0);
-                //boto_bd.AutoSize = true;
-                boto_bd.ForeColor = Color.Black;
-                //boto_bd.Size = Size.Parse(vector[i, 8]);
-                //boto_bd.Size = Size(Size.Parse(vector[i, 8]));
-                //Int32.Parse(vector[i, 6]);
+                    //La columna 0 no s'utilitza perque es on tenim el valor emmagatzemat del ID, no ens interessa per a crear la taula
+                    boto_bd.Name = vector[i, 1];
+                    boto_bd.Titol = vector[i, 2];
+                    boto_bd.Rang = vector[i, 3];
+                    boto_bd.Form = vector[i, 4];
+                    boto_bd.Classe = vector[i, 5];
+                    //int number_color = int.Parse(vector[i, 6], System.Globalization.NumberStyles.AllowThousands);
+                    //boto_bd.BackColor = Color.FromArgb(number_color);        //vector[i, 6].ToString();
+                    //boto_bd.BackColor = Color.Red;
+                    boto_bd.BackColor = ColorTranslator.FromHtml(vector[i, 6]);
+                    //boto_bd.Anchor = (AnchorStyles.Top | AnchorStyles.Left);
+                    boto_bd.Height = 57;
+                    boto_bd.Width = 136;
+                    boto_bd.Margin = new Padding(3, 50, 3, 3);
+                    //boto_bd.Padding = new Padding(10, 0, 10, 0);
+                    //boto_bd.AutoSize = true;
+                    boto_bd.ForeColor = Color.Black;
+                    //boto_bd.Size = Size.Parse(vector[i, 8]);
+                    //boto_bd.Size = Size(Size.Parse(vector[i, 8]));
+                    //Int32.Parse(vector[i, 6]);
 
-                PanelButton.Controls.Add(boto_bd);
-                boto_bd.Dock = DockStyle.Top;
+                    PanelButton.Controls.Add(boto_bd);
+                    boto_bd.Dock = DockStyle.Top;
+                }
             }
+            //end class
         }
     }
 }
