@@ -1,0 +1,13 @@
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\Hash\bin\Debug\Hash.exe.config
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\Hash\bin\Debug\Hash.exe
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\Hash\bin\Debug\Hash.pdb
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\Hash\bin\Debug\SWTextbox.dll
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\Hash\bin\Debug\SWTextbox.pdb
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\Hash\obj\Debug\Hash.csprojAssemblyReference.cache
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\Hash\obj\Debug\Hash.HashForm.resources
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\Hash\obj\Debug\Hash.Properties.Resources.resources
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\Hash\obj\Debug\Hash.csproj.GenerateResource.cache
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\Hash\obj\Debug\Hash.csproj.CoreCompileInputs.cache
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\Hash\obj\Debug\Hash.csproj.CopyComplete
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\Hash\obj\Debug\Hash.exe
+D:\Documents\2021-2022\Projectes\- Sprints Grupals\SecureCode\SecureCode\Hash\obj\Debug\Hash.pdb

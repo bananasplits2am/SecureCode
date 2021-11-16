@@ -47,11 +47,24 @@ namespace SecureCode
         private bool ComprbarUsuari()
         {
             //TextBoxName.Text.Equals("1") && TextBoxPassword.Text.Equals("2")
-            String consulta = "Select Login, Password From users Where Login like ('" + TextBoxName.Text + "') and Password like ('" + TextBoxPassword.Text + "')";
+            if (!String.IsNullOrEmpty(TextBoxName.Text.Trim()) && !String.IsNullOrEmpty(TextBoxPassword.Text.Trim()))
+            {
+                String consulta = "Select Login, Encripted, HashCode From users Where Login like ('" + TextBoxName.Text + "')";
 
-            cls.PortarperConsulta(consulta);
+                cls.PortarperConsulta(consulta);
 
-            return cls.comprobar_psswd(TextBoxName.Text.Trim(), TextBoxPassword.Text.Trim());
+                String psw_xifrada = cls.ComputeHash(TextBoxPassword.Text.Trim());
+                //obtindre password
+                //obtindre codi per xifrar
+                //xifrar password
+                //comparar
+
+                return cls.comprobar_psswd(TextBoxName.Text.Trim(), psw_xifrada);
+            } else
+            {
+                return false;
+            }
+           
         }
 
         private void ButtonCheckPassword_Click(object sender, EventArgs e)

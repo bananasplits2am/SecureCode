@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Security.Cryptography;
 
 namespace ConnexioBD
 {
@@ -96,13 +97,29 @@ namespace ConnexioBD
             connexio.Close();
         }
 
+        //XIFRAR
+        //private const int SaltByteSize = 24;
+        private const int HashByteSize = 24;
+        private const int HasingIterationsCount = 10101;
+        public String ComputeHash(string password, int iterations = HasingIterationsCount, int hashByteSize = HashByteSize)
+        {
+            byte[] salt = Convert.FromBase64String((String)dts.Tables["BD"].Rows[0][2]);
+
+            Rfc2898DeriveBytes hashGenerator = new Rfc2898DeriveBytes(password, salt);
+
+            hashGenerator.IterationCount = iterations;
+
+            return Convert.ToBase64String(hashGenerator.GetBytes(hashByteSize));
+        }
+        //---------
+
         public bool comprobar_psswd(String Nom, String Psswd)
         {
             bool compare_values = false;
 
             //en el cas de que com a mínim hi hagi un resultats, es pot utilitzar la línia: dts != null && dts.Tables.Count == 1 && ds.Tables["BD"].Rows.Count > 0;
 
-            if ((!String.IsNullOrEmpty(Nom) && !String.IsNullOrEmpty(Psswd)) && (dts.Tables["BD"].Rows.Count == 1))
+            if (dts.Tables["BD"].Rows.Count >= 1)
             {
                 compare_values = Nom.Equals(dts.Tables["BD"].Rows[0][0]) && Psswd.Equals(dts.Tables["BD"].Rows[0][1]);
             }

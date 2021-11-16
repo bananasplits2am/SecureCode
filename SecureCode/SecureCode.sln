@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LlencaAplicacions", "..\Con
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccesDades", "..\AccesDades\AccesDades.csproj", "{53A45661-A89C-47B1-A112-185F382EF6B8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hash", "..\Hash\Hash.csproj", "{DD0EC622-B246-4C52-81E5-4D039B5AB2E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{53A45661-A89C-47B1-A112-185F382EF6B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53A45661-A89C-47B1-A112-185F382EF6B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53A45661-A89C-47B1-A112-185F382EF6B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD0EC622-B246-4C52-81E5-4D039B5AB2E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD0EC622-B246-4C52-81E5-4D039B5AB2E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD0EC622-B246-4C52-81E5-4D039B5AB2E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD0EC622-B246-4C52-81E5-4D039B5AB2E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

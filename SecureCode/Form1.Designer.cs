@@ -34,6 +34,7 @@ namespace SecureCode
             this.LabelUser = new System.Windows.Forms.Label();
             this.ControlPanel = new System.Windows.Forms.Panel();
             this.labelRango = new System.Windows.Forms.Label();
+            this.PanelButton = new System.Windows.Forms.Panel();
             this.labelFraseRango = new System.Windows.Forms.Label();
             this.buttonTencarSessio = new System.Windows.Forms.Button();
             this.LabelUserName = new System.Windows.Forms.Label();
@@ -47,7 +48,6 @@ namespace SecureCode
             this.labelEmpresa = new System.Windows.Forms.Label();
             this.labelAny = new System.Windows.Forms.Label();
             this.labelVersio = new System.Windows.Forms.Label();
-            this.PanelButton = new System.Windows.Forms.Panel();
             this.ControlPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).BeginInit();
             this.panel2.SuspendLayout();
@@ -80,7 +80,7 @@ namespace SecureCode
             this.ControlPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.ControlPanel.ForeColor = System.Drawing.Color.White;
             this.ControlPanel.Location = new System.Drawing.Point(0, 0);
-            this.ControlPanel.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.ControlPanel.Margin = new System.Windows.Forms.Padding(0);
             this.ControlPanel.Name = "ControlPanel";
             this.ControlPanel.Size = new System.Drawing.Size(153, 481);
             this.ControlPanel.TabIndex = 1;
@@ -96,6 +96,20 @@ namespace SecureCode
             this.labelRango.TabIndex = 6;
             this.labelRango.Text = "*rank*";
             this.labelRango.Click += new System.EventHandler(this.labelRango_Click);
+            // 
+            // PanelButton
+            // 
+            this.PanelButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.PanelButton.AutoScroll = true;
+            this.PanelButton.AutoSize = true;
+            this.PanelButton.BackColor = System.Drawing.Color.Transparent;
+            this.PanelButton.Location = new System.Drawing.Point(0, 30);
+            this.PanelButton.Margin = new System.Windows.Forms.Padding(0);
+            this.PanelButton.Name = "PanelButton";
+            this.PanelButton.Padding = new System.Windows.Forms.Padding(5);
+            this.PanelButton.Size = new System.Drawing.Size(153, 279);
+            this.PanelButton.TabIndex = 4;
             // 
             // labelFraseRango
             // 
@@ -115,7 +129,7 @@ namespace SecureCode
             this.buttonTencarSessio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonTencarSessio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTencarSessio.ForeColor = System.Drawing.Color.Gray;
-            this.buttonTencarSessio.Location = new System.Drawing.Point(10, 448);
+            this.buttonTencarSessio.Location = new System.Drawing.Point(25, 446);
             this.buttonTencarSessio.Margin = new System.Windows.Forms.Padding(2);
             this.buttonTencarSessio.Name = "buttonTencarSessio";
             this.buttonTencarSessio.Size = new System.Drawing.Size(100, 26);
@@ -139,7 +153,7 @@ namespace SecureCode
             // 
             this.pictureUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureUser.Image = ((System.Drawing.Image)(resources.GetObject("pictureUser.Image")));
-            this.pictureUser.Location = new System.Drawing.Point(37, 393);
+            this.pictureUser.Location = new System.Drawing.Point(50, 393);
             this.pictureUser.Margin = new System.Windows.Forms.Padding(2);
             this.pictureUser.Name = "pictureUser";
             this.pictureUser.Size = new System.Drawing.Size(50, 49);
@@ -260,20 +274,6 @@ namespace SecureCode
             this.labelVersio.Size = new System.Drawing.Size(71, 15);
             this.labelVersio.TabIndex = 0;
             this.labelVersio.Text = "Versió 1.0.1";
-            // 
-            // PanelButton
-            // 
-            this.PanelButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.PanelButton.AutoScroll = true;
-            this.PanelButton.AutoSize = true;
-            this.PanelButton.BackColor = System.Drawing.Color.Transparent;
-            this.PanelButton.Location = new System.Drawing.Point(0, 30);
-            this.PanelButton.Margin = new System.Windows.Forms.Padding(0);
-            this.PanelButton.Name = "PanelButton";
-            this.PanelButton.Padding = new System.Windows.Forms.Padding(5);
-            this.PanelButton.Size = new System.Drawing.Size(153, 279);
-            this.PanelButton.TabIndex = 4;
             // 
             // MainForm
             // 
